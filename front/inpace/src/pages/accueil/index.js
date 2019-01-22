@@ -5,6 +5,7 @@ class Accueil extends Component {
   render() {
     return (
       <div className="index">
+	    Salut toi
       </div>
     );
   }

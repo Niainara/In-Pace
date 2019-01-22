@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
+import Accueil from './pages/accueil/index';
+
 const App = () => (
   <div>
-    <p>coucou</p>
+    <Accueil />
   </div>);
 export default App;
