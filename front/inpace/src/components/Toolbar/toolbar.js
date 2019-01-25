@@ -1,23 +1,22 @@
 import React from 'react';
 import './toolbar.css';
+import Inpace from './inpace.png';
 
-const Toolbar = (
+const Toolbar = () => (
   <header className="toolbar">
-    <h2>
-        IN PACE
-    </h2>
-    <ul>
-      <li>
-        accueil
+    <img className="toolbar__logo" src={Inpace} alt="IN PACE" />
+    <ul className="toolbar__nav">
+      <li className="toolbar__nav__item">
+        <p>accueil</p>
       </li>
-      <li>
-        accueil
+      <li className="toolbar__nav__item">
+        <p>accueil</p>
       </li>
-      <li>
-        accueil
+      <li className="toolbar__nav__item">
+        <p>accueil</p>
       </li>
-      <li>
-        accueil
+      <li className="toolbar__nav__item">
+        <p>accueil</p>
       </li>
     </ul>
   </header>
