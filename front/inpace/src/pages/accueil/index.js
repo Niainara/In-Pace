@@ -19,9 +19,12 @@ class Accueil extends Component {
 						<div className="mainpage__card__text">
 							<p>CONSULTEZ LES POMPES FUNEBRES DISPONIBLES EN TOUTE CONFIANCE</p>
 						</div>
+						<div className="mainpage__button">
+							<a href="#nextpage"> NEXT </a>
+						</div>
 					</div>
 				</div>
-				<div className="nextpage">
+				<div id="nextpage" className="nextpage">
 					<div className="nextpage__sentence">
 						<p>FAITES NOUS CONFIANCE ET COMMENCEZ A CHERCHER LES SERVICES QUI VOUS CONVIENNENT</p>
 						<p>AFIN DE PREPARER LES FUNERAILLES DANS LES MEILLEURES CONDITIONS</p>
