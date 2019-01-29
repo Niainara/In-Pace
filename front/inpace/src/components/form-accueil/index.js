@@ -37,21 +37,19 @@ const renderTextField = ({
 	/>
 );
 
-const MyForm = (props) => {
-	return (
-		<form className="form">
-			<Field name="nomDefunt" component={renderTextField} label="NOM DU DEFUNT" />
-			<Field name="prenomDefunt" component={renderTextField} label="PRENOM DU DEFUNT" />
-			<Field name="hopital" component={SelectField} hintText="HOPITAL OU SE TROUVE LE DEFUNT" label="HOPITAL OU SE TROUVE LE DEFUNT">					
-				<MenuItem value="HSP" primaryText="Hopital Saint-Pierre" />
-				<MenuItem value="HSJ" primaryText="Hopital Saint-Joseph" />
-			</Field>
-			<Field name="dateDeces" component={DatePicker} format={null} hintText="DATE DU DECES" label="DATE DU DECES" />
-			<Field name="lieuEnterrement" component={renderTextField} label="LIEU PROBABLE DES FUNERAILLES" />
-			<button type="submit" className="form__button">CONTINUER</button>
-		</form>
-	);
-};
+const MyForm = () => (
+	<form className="form">
+		<Field name="nomDefunt" component={renderTextField} label="NOM DU DEFUNT" />
+		<Field name="prenomDefunt" component={renderTextField} label="PRENOM DU DEFUNT" />
+		<Field name="hopital" component={SelectField} hintText="HOPITAL OU SE TROUVE LE DEFUNT" label="HOPITAL OU SE TROUVE LE DEFUNT">
+			<MenuItem value="HSP" primaryText="Hopital Saint-Pierre" />
+			<MenuItem value="HSJ" primaryText="Hopital Saint-Joseph" />
+		</Field>
+		<Field name="dateDeces" component={DatePicker} format={null} hintText="DATE DU DECES" label="DATE DU DECES" />
+		<Field name="lieuEnterrement" component={renderTextField} label="LIEU PROBABLE DES FUNERAILLES" />
+		<button type="submit" className="form__button">CONTINUER</button>
+	</form>
+);
 
 export default reduxForm({
 	form: 'accueil',
