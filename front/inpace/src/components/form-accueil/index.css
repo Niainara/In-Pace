@@ -1,0 +1,18 @@
+.form__button {
+	padding: 6px 12px;
+	border: 1px solid;
+	line-height: 1.5;
+	background-color: #449d44;
+	border-color: #449d44;
+	font-size: 16;
+	border-radius: 6px;
+}
+
+.form__button:hover {
+	background-color: #2bc437;
+	border-color: #2bc437;
+}
+
+.form__button:active {
+	box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
+}

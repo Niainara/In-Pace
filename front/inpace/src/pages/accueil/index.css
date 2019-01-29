@@ -35,16 +35,42 @@
 	width: 100vw;
 	height: 100vh;
 	flex-direction: column;
+	position: relative;
+	align-items: center;
 }
 
-.nextpage__text {
+.nextpage__sentence {
 	text-align: center;
 	font-size: 1.6em;
 	padding: 40px 12.5vw 0px 12.5vw;
 }
 
 .nextpage__form {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.nextpage__form__text {
+	padding: 30px;
+	flex-basis: 30vw;
+}
+
+.nextpage__form__form {
 }
 
 .nextpage__footer {
+	background-image: url("../../assets/Fleur.jpg");
+	position: absolute;
+	bottom: 0;
+	width: 100vw;
+	display: flex;
+	height: 3vw;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.nextpage__footer div {
+	flex-grow: 1;
+	text-align: center;
 }
