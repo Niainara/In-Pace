@@ -2,12 +2,24 @@ import React, { Component } from 'react';
 import './index.css';
 import Logo from '../../assets/logo.png';
 import MyForm from '../../components/form-accueil/index';
+import MyForm2 from '../../components/form2-accueil/index';
 
 class Accueil extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			hasClicked: false
 		};
+		this.handleContinue = this.handleContinue.bind(this);
+		this.handleReturn = this.handleReturn.bind(this);
+	}
+
+	handleContinue() {
+    this.setState({hasClicked: true});
+  }
+
+	handleReturn() {
+		this.setState({hasClicked: false});
 	}
 
 	render() {
@@ -30,27 +42,7 @@ class Accueil extends Component {
 						<p>AFIN DE PREPARER LES FUNERAILLES DANS LES MEILLEURES CONDITIONS</p>
 					</div>
 					<div className="nextpage__form">
-						<div className="nextpage__form__text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu fermentum risus.
-			Suspendisse enim urna, tempor non augue vel, suscipit vestibulum felis.
-			Quisque bibendum odio est,
-			quis hendrerit lorem finibus et.
-			Nulla ac bibendum nisi.Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-			per inceptos himenaeos. Ut sed ipsum in ipsum tristique fringilla.
-			Pellentesque lacinia, purus in eleifend fermentum,
-			erat metus hendrerit justo, vitae eleifend dui lacus nec erat.
-			Phasellus ut scelerisque nisi. Nullam blandit quam eu mauris aliquam,
-			ac ullamcorper metus dictum. Morbi tincidunt sed risus ut ornare.
-Aenean ac urna eget sem eleifend suscipit eget ac nisi.
-			Sed dictum libero dui, et gravida nisl vestibulum ut.
-			Duis quis suscipit risus. Donec sit amet dui sit amet dolor bibendum iaculis.
-			Nunc at enim venenatis, varius mauris sit amet, efficitur erat. Aliquam a aliquet velit.
-			Nulla facilisi. Mauris vitae nunc ut est dictum lacinia sit amet vitae enim.
-							</p>
-						</div>
-						<div className="nextpage__form__form">
-							<MyForm />
-						</div>
+						{(!this.state.hasClicked) ? <MyForm handleContinue={this.handleContinue} /> : <MyForm2 handleReturn={this.handleReturn} />}
 					</div>
 					<div className="nextpage__footer">
 						<div>CONDITIONS D&apos;UTILISATION</div>
