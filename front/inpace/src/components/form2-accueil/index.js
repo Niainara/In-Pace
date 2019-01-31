@@ -2,6 +2,7 @@ import React from 'react';
 import '../../pages/accueil/index.css';
 import { reduxForm, Field } from 'redux-form';
 import { TextField } from 'material-ui';
+import { Toggle } from 'redux-form-material-ui';
 
 const validate = (values) => {
 	const errors = {};
@@ -32,18 +33,22 @@ const renderTextField = ({
 	/>
 );
 
-const MyForm2 = props => (
+const MyForm2 = ({ handleReturn }) => (
 	<div>
 		<div className="nextpage__form__text">
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adisciping elit, sed do eiusmodem tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nstrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				Lorem ipsum dolor sit amet, consectetur adisciping elit,
+	sed do eiusmodem tempor incididunt ut labore et dolore magna aliqua.
+	Ut enim ad minim veniam, quis nstrud exercitation ullamco laboris
+	nisi ut aliquip ex ea commodo consequat.
 			</p>
 		</div>
 		<div className="nextpage__form">
 			<form>
 				<Field name="mailContact" component={renderTextField} label="ADRESSE MAIL DE CONTACT" />
 				<Field name="telephoneContact" component={renderTextField} label="NUMERO DE TELEPHONE DE CONTACT" />
-				<button type="submit" className="nextpage__form__button" onClick={props.handleReturn}>RETOUR</button>
+				<Field name="informations" component={Toggle} label="Je désire recevoir des informations sur les démarches administratives à effectuer (pension, notification, résiliation, remboursement, etc.)" />
+				<button type="submit" className="nextpage__form__button" onClick={handleReturn}>RETOUR</button>
 				<button type="submit" className="nextpage__form__button">CONTINUER</button>
 			</form>
 		</div>

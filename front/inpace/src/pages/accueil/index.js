@@ -8,18 +8,18 @@ class Accueil extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			hasClicked: false
+			hasClicked: false,
 		};
 		this.handleContinue = this.handleContinue.bind(this);
 		this.handleReturn = this.handleReturn.bind(this);
 	}
 
 	handleContinue() {
-    this.setState({hasClicked: true});
-  }
+		this.setState({ hasClicked: true });
+	}
 
 	handleReturn() {
-		this.setState({hasClicked: false});
+		this.setState({ hasClicked: false });
 	}
 
 	render() {
@@ -42,7 +42,8 @@ class Accueil extends Component {
 						<p>AFIN DE PREPARER LES FUNERAILLES DANS LES MEILLEURES CONDITIONS</p>
 					</div>
 					<div className="nextpage__form">
-						{(!this.state.hasClicked) ? <MyForm handleContinue={this.handleContinue} /> : <MyForm2 handleReturn={this.handleReturn} />}
+						{(!this.state.hasClicked) ? <MyForm handleContinue={this.handleContinue} />
+							:	<MyForm2 handleReturn={this.handleReturn} />}
 					</div>
 					<div className="nextpage__footer">
 						<div>CONDITIONS D&apos;UTILISATION</div>
