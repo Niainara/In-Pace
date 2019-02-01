@@ -1,23 +1,7 @@
-#container{
-    font-size: 1em;
-    text-align: center;
-    
-}
-
 #title{
-    position: fixed;
-    width:100%;
-    top: -38px;
-    font-size: 1,5em;
-    margin: auto;
-}
-
-.text{
-    font-size: 1em;
+    text-align: center;
 }
 
 .subtitle{
-    font-size: 1.2em;
     text-align: center;
-    margin: auto;
 }
