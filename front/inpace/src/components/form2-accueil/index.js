@@ -4,6 +4,7 @@ import { reduxForm, Field } from 'redux-form';
 import { TextField } from 'material-ui';
 import { Toggle } from 'redux-form-material-ui';
 
+// Fonction qui vérifie que les champs soient correctement remplis.
 const validate = (values) => {
 	const errors = {};
 	if (!values.mailContact) {
@@ -18,6 +19,7 @@ const validate = (values) => {
 	return errors;
 };
 
+// Fonction qui reçoit des props et les passe au composant TextField
 const renderTextField = ({
 	input,
 	label,
@@ -33,6 +35,7 @@ const renderTextField = ({
 	/>
 );
 
+// Forumlaire numéro 2
 const MyForm2 = ({ handleReturn }) => (
 	<div>
 		<div className="nextpage__form__text">
@@ -55,6 +58,7 @@ const MyForm2 = ({ handleReturn }) => (
 	</div>
 );
 
+// export du formulaire numéro 2 ainsi que la fonction validante
 export default reduxForm({
 	form: 'accueil2',
 	validate,

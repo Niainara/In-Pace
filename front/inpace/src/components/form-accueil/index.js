@@ -1,3 +1,4 @@
+// Le css de ce fichier se trouve dans ./pages/accueil/
 import React from 'react';
 import '../../pages/accueil/index.css';
 import { reduxForm, Field } from 'redux-form';
@@ -8,6 +9,7 @@ import {
 } from 'redux-form-material-ui';
 import { TextField } from 'material-ui';
 
+// fonction permettant de vérifier que les champs ne restent pas vides.
 const validate = (values) => {
 	const errors = {};
 	if (!values.nomDefunt) {
@@ -22,6 +24,7 @@ const validate = (values) => {
 	return errors;
 };
 
+// fonction qui va recevoir les props et les passer au TextField
 const renderTextField = ({
 	input,
 	label,
@@ -37,6 +40,7 @@ const renderTextField = ({
 	/>
 );
 
+// Fonction principale qui retourne un formulaire redux
 const MyForm = ({ handleContinue }) => (
 	<div>
 		<div className="nextpage__form__text">
@@ -64,6 +68,7 @@ const MyForm = ({ handleContinue }) => (
 	</div>
 );
 
+// On exporte le formulaire ainsi que la fonction qui permet de vérifier les champs
 export default reduxForm({
 	form: 'accueil',
 	validate,
