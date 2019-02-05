@@ -1,5 +1,4 @@
 import React from 'react';
-import './index.css';
 
 class ChoiceObs extends React.Component {
   constructor(props) {
