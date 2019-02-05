@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 
 
-class Header extends React.Component {
+class HeaderObs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,4 +19,4 @@ class Header extends React.Component {
     );
   }
 }
-export default Header;
+export default HeaderObs;
