@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
-import Toolbar from './components/Toolbar/toolbar';
-import PageBase from './components/Base/Base';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Accueil from './pages/accueil/index';
 
 const App = () => (
-  <div>
-    <Toolbar />
-    <PageBase />
-  </div>);
+	<div>
+		<BrowserRouter>
+			<Switch>
+				<Route path={['/', '/accueil']} exact component={Accueil} />
+			</Switch>
+		</BrowserRouter>
+	</div>);
+
 export default App;
