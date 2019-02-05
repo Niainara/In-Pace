@@ -6,4 +6,5 @@ const App = () => (
 	<div>
 		<Accueil />
 	</div>);
+
 export default App;
