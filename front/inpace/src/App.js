@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
-import Toolbar from './components/Toolbar/toolbar';
+import Accueil from './pages/accueil/index';
 
 const App = () => (
-  <div>
-    <Toolbar />
-  </div>);
+	<div>
+		<Accueil />
+	</div>);
+
 export default App;

@@ -1,0 +1,50 @@
+.index {
+}
+.mainpage {
+	background-image: url("../../assets/Fleur.jpg");
+	background-size: cover;
+}
+
+.mainpage__card {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+  justify-content: center;
+	position: relative;
+}
+
+.mainpage__card__logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.mainpage__card__text {
+	color: white;
+	text-align: center;
+	border-style: solid;
+	padding: 35px 0px 35px 0px;
+	border-width: 5px;
+	width: 33vw;
+	font-size: 2em;
+}
+
+.nextpage {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	flex-direction: column;
+}
+
+.nextpage__text {
+	text-align: center;
+	font-size: 1.6em;
+	padding: 40px 12.5vw 0px 12.5vw;
+}
+
+.nextpage__form {
+}
+
+.nextpage__footer {
+}
