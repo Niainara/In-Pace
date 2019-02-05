@@ -1,6 +1,6 @@
 import React from 'react';
-import HeaderObs from './Header-obs/index';
-import ChoiceObs from './Choice-comp-obs/index';
+import HeaderObs from '../Header/index';
+import ChoiceObs from '../Choice-comp/index';
 
 
 class Obseques extends React.Component {
