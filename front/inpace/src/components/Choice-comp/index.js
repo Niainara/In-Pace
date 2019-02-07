@@ -1,6 +1,7 @@
 import React from 'react';
+import './index.css';
 
-class ChoiceObs extends React.Component {
+class Choice extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,4 +39,4 @@ class ChoiceObs extends React.Component {
   }
 }
 
-export default ChoiceObs;
+export default Choice;
