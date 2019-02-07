@@ -1,5 +1,4 @@
 import React from 'react';
-import './Base.css';
 import Header from '../Header/index';
 import Choice from '../Choice-comp/index';
 import Toolbar from '../Toolbar/toolbar';

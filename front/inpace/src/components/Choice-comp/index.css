@@ -11,13 +11,13 @@
     font-style: normal;
 }
 
-.div-btn{
+.div-btn__base{
     width:100%;
     display:flex;
     margin-right: auto;
     margin-left: auto;
 }
-.container__btn{
+.container__btn__base{
     width:25%;
     height:6em;
     margin:35px;
@@ -33,15 +33,15 @@
     margin-left:auto;
     justify-content: center;
 }
-.container__btn.active{
+.container__btn__base.active{
     background-color:#7AA93C;
     color:white;
 }
-.container__btn:hover{
+.container__btn__base:hover{
     background-color:#7AA93C;
     color:white;
 }
-.container__btn-suivant{
+.container__btn-suivant__base{
     background-color: #7AA93C;
     color:white;
     height:50px;
@@ -50,7 +50,7 @@
     line-height: 7px;
     width:150px;
 }
-.container__btn-precedent{
+.container__btn-precedent__base{
     background-color: #CCCCCC;
     color:white;
     width:150px;
@@ -59,7 +59,7 @@
     line-height: 7px;
 }
 @media only screen and (max-width: 768px) {
-    .photo-header{
+    .photo-header__base{
         width: 100vh;
         height:auto;
         display:flex;
@@ -67,13 +67,13 @@
         margin-left:auto;
         padding-top:90px;
     } 
-    .container__title{
+    .container__title__base{
         text-align: center;
         font-family: "Montserrat-SemiBold";
         text-transform: uppercase;
         font-size: 1.5em;
     }
-    .container__text{
+    .container__text__base{
         text-align: center;
         font-family: "Montserrat-Thin";
         letter-spacing: 2px;
@@ -82,18 +82,18 @@
         margin-right:auto;
         margin-left:auto;
     }
-    .container__text__description{
+    .container__text__description__base{
         text-align: justify;
         width:95%;
     }
 
-    .div-btn{
+    .div-btn__base{
         width:100%;
         display:flex;
         margin-right: auto;
         margin-left: auto;
     }
-    .container__btn{
+    .container__btn__base{
         width:31%;
         height:8em;
         margin:35px;
@@ -110,15 +110,15 @@
         justify-content: center;
         cursor: pointer;
     }
-    .container__btn:active{
+    .container__btn__base:active{
         background-color:#7AA93C;
         color:white;
     }
-    .container__btn:hover{
+    .container__btn__base:hover{
         background-color:#7AA93C;
         color:white;
     }
-    .container__btn-suivant{
+    .container__btn-suivant__base{
         background-color: #7AA93C;
         color:white;
         height:50px;
@@ -127,7 +127,7 @@
         line-height: 7px;
         width:150px;
     }
-    .container__btn-precedent{
+    .container__btn-precedent__base{
         background-color: #CCCCCC;
         color:white;
         width:150px;

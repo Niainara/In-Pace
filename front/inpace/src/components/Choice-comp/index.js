@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css';
+import { NavLink } from 'react-router-dom';
 
 class Choice extends React.Component {
   constructor(props) {
@@ -17,21 +18,21 @@ class Choice extends React.Component {
     const { showingThree } = this.state;
     return (
       <React.Fragment>
-        <div className="container">
-          <div className="div-btn">
-            <button className={showingOne ? 'container__btn active' : 'container__btn'} type="button" onClick={() => this.setState({ showingOne: !showingOne, showingTwo: false, showingThree: false })}> Enlèvement, transport et corbillard </button>
-            <button className={showingTwo ? 'container__btn active' : 'container__btn'} type="button" onClick={() => this.setState({ showingTwo: !showingTwo, showingOne: false, showingThree: false })}> Soin et mise en bière du defunt </button>
-            <button className={showingThree ? 'container__btn active' : 'container__btn'} type="button" onClick={() => this.setState({ showingThree: !showingThree, showingTwo: false, showingOne: false })}> Démarches administratives </button>
+        <div className="container__base">
+          <div className="div-btn__base">
+            <button className={showingOne ? 'container__btn__base active' : 'container__btn__base'} type="button" onClick={() => this.setState({ showingOne: !showingOne, showingTwo: false, showingThree: false })}> Enlèvement, transport et corbillard </button>
+            <button className={showingTwo ? 'container__btn__base active' : 'container__btn__base'} type="button" onClick={() => this.setState({ showingTwo: !showingTwo, showingOne: false, showingThree: false })}> Soin et mise en bière du defunt </button>
+            <button className={showingThree ? 'container__btn__base active' : 'container__btn__base'} type="button" onClick={() => this.setState({ showingThree: !showingThree, showingTwo: false, showingOne: false })}> Démarches administratives </button>
           </div>
-          {showingOne ? <p className="container__text container__text__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p> : null
+          {showingOne ? <p className="container__text__base container__text__description__base">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p> : null
         }
-          {showingTwo ? <p className="container__text container__text__description">coucou</p> : null
+          {showingTwo ? <p className="container__text__base container__text__description__base">coucou</p> : null
         }
-          {showingThree ? <p className="container__text container__text__description">coucou toi</p> : null
+          {showingThree ? <p className="container__text__base container__text__description__base">coucou toi</p> : null
         }
           <div className="div-btn">
-            <button className="container__btn container__btn-precedent" type="button">Précédent</button>
-            <button className="container__btn container__btn-suivant" type="button">Suivant</button>
+            <button className="container__btn__base container__btn-precedent__base" type="button">Précédent</button>
+            <NavLink to="/choix-des-obseques"><button className="container__btn__base container__btn-suivant__base" type="button">Suivant</button></NavLink>
           </div>
         </div>
       </React.Fragment>
