@@ -1,7 +1,7 @@
 import React from 'react';
-import HeaderObs from '../Header/index';
-import ChoiceObs from '../Choice-comp/index';
-
+import HeaderObs from './Choice/index';
+import ChoiceObs from './HeaderObs/index';
+import Toolbar from '../Toolbar/toolbar';
 
 class Obseques extends React.Component {
   constructor(props) {
@@ -13,8 +13,9 @@ class Obseques extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <HeaderObs />
+        <Toolbar />
         <ChoiceObs />
+        <HeaderObs />
       </React.Fragment>
     );
   }

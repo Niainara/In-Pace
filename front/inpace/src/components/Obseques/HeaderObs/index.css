@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: url('Montserrat-Thin.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('Montserrat-SemiBold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header__obs{
+    background-image: url('./bougies.jpg');
+    width:100%;
+    height:500px;
+    display:flex;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:20px;
+    background-size: cover;
+}
+
+.header__photo__obs{
+    width:95%;
+    display:flex;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:90px;
+    object-fit: scale-down;
+
+}
+.header__title__obs{
+    text-align: center;
+    font-family: "Montserrat-SemiBold";
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+.header__description__obs{
+    text-align: center;
+    font-family: "Montserrat-Thin";
+    letter-spacing: 2px;
+    width:70%;
+    display: flex;
+    margin-right:auto;
+    margin-left:auto;
+}
+@media only screen and (min-width:660px){
+    .header__obs{
+        width:100%;
+    }
+}
+@media only screen and (max-width:660px){
+    .header__title__obs{
+        font-size:30px;
+        width:100%;
+    }
+    .container__header__obs{
+        width:100%;
+    }
+    .header__description__obs{
+        width:95%;
+        text-align: justify;
+    }
+}
