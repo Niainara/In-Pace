@@ -31,7 +31,7 @@ class Choice extends React.Component {
           {showingThree ? <p className="container__text__base container__text__description__base">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio</p> : null
         }
           <div className="div-btn__base">
-            <NavLink to ="/accueil" className="container__btn__base container__btn-precedent__base" type="button">Précédent</NavLink>
+            <NavLink to="/accueil" className="container__btn__base container__btn-precedent__base" type="button">Précédent</NavLink>
             <NavLink to="/choix-des-obseques" className="container__btn__base container__btn-suivant__base" type="button">Suivant</NavLink>
           </div>
         </div>

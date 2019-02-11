@@ -44,7 +44,7 @@ const renderTextField = ({
 // Fonction principale qui retourne un formulaire redux
 const MyForm = ({ handleContinue }) => (
   <div className="form__block">
-      <p className="nextpage__form__text">
+    <p className="nextpage__form__text">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Fusce vel dolor risus. Aliquam bibendum lorem eu dui finibus pretium.
 In eu dolor consequat, sollicitudin diam id, ultricies nisl.
@@ -55,7 +55,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Fusce vel dolor risus. Aliquam bibendum lorem eu dui finibus pretium.
 In eu dolor consequat, sollicitudin diam id, ultricies nisl.
 
-      </p>
+    </p>
     <div className="nextpage__form">
       <form className="form__field">
         <Field className="form__field__item" name="nomDefunt" component={renderTextField} label="NOM DU DEFUNT" />
