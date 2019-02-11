@@ -39,15 +39,13 @@ const renderTextField = ({
 
 // Forumlaire numéro 2
 const MyForm2 = ({ handleReturn }) => (
-  <div>
-    <div className="nextpage__form__text">
-      <p>
+  <div className="form__block">
+      <p className="nextpage__form__text">
 Lorem ipsum dolor sit amet, consectetur adisciping elit,
 sed do eiusmodem tempor incididunt ut labore et dolore magna aliqua.
 Ut enim ad minim veniam, quis nstrud exercitation ullamco laboris
 nisi ut aliquip ex ea commodo consequat.
       </p>
-    </div>
     <div className="nextpage__form">
       <form>
         <Field name="mailContact" component={renderTextField} label="ADRESSE MAIL DE CONTACT" />

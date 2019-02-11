@@ -44,19 +44,33 @@
 .container__btn-suivant__base{
     background-color: #7AA93C;
     color:white;
-    height:50px;
+    height:20px;
     padding:auto;
     text-align: center;
     line-height: 7px;
     width:150px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    
 }
 .container__btn-precedent__base{
     background-color: #CCCCCC;
     color:white;
     width:150px;
-    height:50px;
+    height:20px;
     text-align: center;
     line-height: 7px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.container__text__description__base{
+    width:90%;
+    text-align: justify;
+    display: flex;
+    margin-right:auto;
+    margin-left:auto;
 }
 @media only screen and (max-width: 768px) {
     .photo-header__base{

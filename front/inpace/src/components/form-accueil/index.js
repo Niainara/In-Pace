@@ -8,6 +8,7 @@ import {
   SelectField,
 } from 'redux-form-material-ui';
 import { TextField } from 'material-ui';
+import './index.css';
 
 // fonction permettant de vérifier que les champs ne restent pas vides.
 const validate = (values) => {
@@ -42,26 +43,29 @@ const renderTextField = ({
 
 // Fonction principale qui retourne un formulaire redux
 const MyForm = ({ handleContinue }) => (
-  <div>
-    <div className="nextpage__form__text">
-      <p>
+  <div className="form__block">
+      <p className="nextpage__form__text">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Fusce vel dolor risus. Aliquam bibendum lorem eu dui finibus pretium.
 In eu dolor consequat, sollicitudin diam id, ultricies nisl.
 Integer eget tristique erat. Aliquam id felis sit amet dui cursus viverra in nec velit.
 Duis vestibulum quam lobortis gravida mollis. In iaculis et lacus eu gravida.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Fusce vel dolor risus. Aliquam bibendum lorem eu dui finibus pretium.
+In eu dolor consequat, sollicitudin diam id, ultricies nisl.
+
       </p>
-    </div>
     <div className="nextpage__form">
-      <form>
-        <Field name="nomDefunt" component={renderTextField} label="NOM DU DEFUNT" />
-        <Field name="prenomDefunt" component={renderTextField} label="PRENOM DU DEFUNT" />
-        <Field name="hopital" component={SelectField} hintText="HOPITAL OU SE TROUVE LE DEFUNT" label="HOPITAL OU SE TROUVE LE DEFUNT">
+      <form className="form__field">
+        <Field className="form__field__item" name="nomDefunt" component={renderTextField} label="NOM DU DEFUNT" />
+        <Field className="form__field__item" name="prenomDefunt" component={renderTextField} label="PRENOM DU DEFUNT" />
+        <Field className="form__field__item" name="hopital" component={SelectField} hintText="HOPITAL OU SE TROUVE LE DEFUNT" label="HOPITAL OU SE TROUVE LE DEFUNT">
           <MenuItem value="HSP" primaryText="Hopital Saint-Pierre" />
           <MenuItem value="HSJ" primaryText="Hopital Saint-Joseph" />
         </Field>
-        <Field name="dateDeces" component={DatePicker} format={null} hintText="DATE DU DECES" label="DATE DU DECES" />
-        <Field name="lieuEnterrement" component={renderTextField} label="LIEU PROBABLE DES FUNERAILLES" />
+        <Field className="form__field__item" name="dateDeces" component={DatePicker} format={null} hintText="DATE DU DECES" label="DATE DU DECES" />
+        <Field className="form__field__item" name="lieuEnterrement" component={renderTextField} label="LIEU PROBABLE DES FUNERAILLES" />
         <button type="submit" className="nextpage__form__button" onClick={handleContinue}>CONTINUER</button>
       </form>
     </div>

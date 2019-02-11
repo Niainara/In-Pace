@@ -43,6 +43,13 @@
 	text-align: center;
 	font-size: 1.6em;
 	padding: 40px 12.5vw 0px 12.5vw;
+	width:80%;
+	margin:0;
+}
+
+.nextpage__sentence__text{
+	font-size: 0.9em;
+	margin:0;
 }
 
 .nextpage__form {
@@ -57,18 +64,22 @@
 }
 
 .nextpage__form__button {
-	padding: 6px 12px;
 	border: 1px solid;
-	line-height: 1.5;
-	background-color: #449d44;
-	border-color: #449d44;
-	font-size: 16;
-	border-radius: 6px;
+	background-color: #CCCCCC;
+    color:white;
+    height:50px;
+    text-align: center;
+    line-height: 7px;
+    width:150px;
+    text-decoration: none;
+	align-items: center;
+	cursor: pointer;
+	margin:20px;
 }
 
 .nextpage__form__button:hover {
-	background-color: #2bc437;
-	border-color: #2bc437;
+	background-color: #7AA93C;
+	border-color: 4px solid red;
 }
 
 .nextpage__form__button:active {

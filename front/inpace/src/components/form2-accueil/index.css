@@ -1,0 +1,12 @@
+.nextpage__form__text{
+    width:30%;
+    text-align:justify;
+    margin:50px;
+}
+
+.form__block{
+    display:flex;
+    margin:20px;
+    width:80%;
+    height: 400px;
+}

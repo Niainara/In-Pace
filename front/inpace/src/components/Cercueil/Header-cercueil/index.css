@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: url('Montserrat-Thin.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('Montserrat-SemiBold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header__cercueil{
+    background-image: url('./cercueil.jpg');
+    width:100%;
+    height:500px;
+    display:flex;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:20px;
+    background-size: cover;
+}
+
+.header__photo__cercueil{
+    width:95%;
+    display:flex;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:90px;
+    object-fit: scale-down;
+
+}
+.header__title__cercueil{
+    text-align: center;
+    font-family: "Montserrat-SemiBold";
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+.header__description__cercueil{
+    text-align: justify center;
+    font-family: "Montserrat-Thin";
+    letter-spacing: 2px;
+    width:70%;
+    display: flex;
+    margin-right:auto;
+    margin-left:auto;
+}
+.header__cercueil__progress{
+    height:25px;
+    display:flex;
+    list-style: none;
+    justify-content: space-around;
+    margin: 5px auto;
+    padding:0;
+    width:95%;
+}
+.header__cercueil__progress__item{
+    background-color:#7AA93C;
+    height:10px;
+    width: 24%;
+    margin:3px;
+}
+.header__cercueil__progress__item__inactive{
+    background-color:#D6D6D6;
+
+}
+@media only screen and (min-width:660px){
+    .header__cercueil{
+        width:100%;
+    }
+}
+@media only screen and (max-width:660px){
+    .header__title__cercueil{
+        font-size:30px;
+        width:100%;
+    }
+    .container__header__cercueil{
+        width:100%;
+    }
+    .header__description__cercueil{
+        width:95%;
+        text-align: justify;
+    }
+}

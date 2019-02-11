@@ -11,13 +11,13 @@
     font-style: normal;
 }
 
-.div-btn__obs{
+.div-btn__cercueil{
     width:100%;
     display:flex;
     margin-right: auto;
     margin-left: auto;
 }
-.container__btn__obs{
+.container__btn__cercueil{
     width:25%;
     height:6em;
     margin:35px;
@@ -33,15 +33,15 @@
     margin-left:auto;
     justify-content: center;
 }
-.container__btn__obs.active{
+.container__btn__cercueil.active{
     background-color:#7AA93C;
     color:white;
 }
-.container__btn__obs:hover{
+.container__btn__cercueil:hover{
     background-color:#7AA93C;
     color:white;
 }
-.container__btn-suivant__obs{
+.container__btn-suivant__cercueil{
     background-color: #7AA93C;
     color:white;
     height:20px;
@@ -53,7 +53,7 @@
     display: flex;
     align-items: center;
 }
-.container__btn-precedent__obs{
+.container__btn-precedent__cercueil{
     background-color: #CCCCCC;
     color:white;
     width:150px;
@@ -64,7 +64,7 @@
     display: flex;
     align-items: center;
 }
-.container__text__description__obs{
+.container__text__description__cercueil{
     width:90%;
     text-align: justify;
     display: flex;
@@ -72,7 +72,7 @@
     margin-left:auto;
 }
 @media only screen and (max-width: 768px) {
-    .photo-header__obs{
+    .photo-header__cercueil{
         width: 100vh;
         height:auto;
         display:flex;
@@ -80,13 +80,13 @@
         margin-left:auto;
         padding-top:90px;
     } 
-    .container__title__obs{
+    .container__title__cercueil{
         text-align: center;
         font-family: "Montserrat-SemiBold";
         text-transform: uppercase;
         font-size: 1.5em;
     }
-    .container__text__obs{
+    .container__text__cercueil{
         text-align: center;
         font-family: "Montserrat-Thin";
         letter-spacing: 2px;
@@ -95,18 +95,18 @@
         margin-right:auto;
         margin-left:auto;
     }
-    .container__text__description__obs{
+    .container__text__description__cercueil{
         text-align: justify;
         width:95%;
     }
 
-    .div-btn__obs{
+    .div-btn__cercueil{
         width:100%;
         display:flex;
         margin-right: auto;
         margin-left: auto;
     }
-    .container__btn__obs{
+    .container__btn__cercueil{
         width:31%;
         height:8em;
         margin:35px;
@@ -123,15 +123,15 @@
         justify-content: center;
         cursor: pointer;
     }
-    .container__btn__obs:active{
+    .container__btn__cercueil:active{
         background-color:#7AA93C;
         color:white;
     }
-    .container__btn__obs:hover{
+    .container__btn__cercueil:hover{
         background-color:#7AA93C;
         color:white;
     }
-    .container__btn-suivant__obs{
+    .container__btn-suivant__cercueil{
         background-color: #7AA93C;
         color:white;
         height:50px;
@@ -140,11 +140,11 @@
         line-height: 7px;
         width:150px;
     }
-    .container__btn-precedent__obs{
+    .container__btn-precedent__cercueil{
         background-color: #CCCCCC;
         color:white;
         width:150px;
-        height:50px;
+        height:20px;
         text-align: center;
         line-height: 7px;
     }
