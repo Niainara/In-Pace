@@ -46,6 +46,25 @@
     margin-right:auto;
     margin-left:auto;
 }
+.header__base__progress{
+    height:25px;
+    display:flex;
+    list-style: none;
+    justify-content: space-around;
+    margin: 5px auto;
+    padding:0;
+    width:95%;
+}
+.header__base__progress__item{
+    background-color:#7AA93C;
+    height:10px;
+    width: 24%;
+    margin:3px;
+}
+.header__base__progress__item__inactive{
+    background-color:#D6D6D6;
+
+}
 @media only screen and (min-width:660px){
     .header{
         width:100%;
