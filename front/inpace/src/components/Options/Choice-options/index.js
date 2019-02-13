@@ -98,11 +98,11 @@ class ChoiceOptions extends React.Component {
               <div className="div-btn__options__section__header"> Cérémonie </div>
               <div className="div-btn__options__section__description">
                 <FormControlLabel
-                  control={<Checkbox checked={this.setState.checkedBox} onChange={this.handleChange('checkedBox')} value="checkedBox" classes={{ root: classes.root, checked: classes.checked }} />}
+                  control={<Checkbox checked={this.state.checkedBox} onChange={this.handleChange('checkedBox')} value="checkedBox" classes={{ root: classes.root, checked: classes.checked }} />}
                   label="Oui"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={this.setState.checkedBox} onChange={this.handleChange('checkedBox')} value="checkedBox" classes={{ root: classes.root, checked: classes.checked }} />}
+                  control={<Checkbox checked={this.state.checkedBox} onChange={this.handleChange('checkedBox')} value="checkedBox" classes={{ root: classes.root, checked: classes.checked }} />}
                   label="Je ne sais pas"
                 />
               </div>
