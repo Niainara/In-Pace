@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: url('Montserrat-Thin.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('Montserrat-SemiBold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header__otpions{
+    background-image: url('./options.jpg');
+    width:100%;
+    height:500px;
+    display:flex;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:20px;
+    background-size: cover;
+}
+
+.header__photo__otpions{
+    width:95%;
+    display:flex;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:90px;
+    object-fit: scale-down;
+
+}
+.header__title__otpions{
+    text-align: center;
+    font-family: "Montserrat-SemiBold";
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+.header__description__otpions{
+    text-align: center;
+    font-family: "Montserrat-Thin";
+    letter-spacing: 2px;
+    width:70%;
+    display: flex;
+    margin-right:auto;
+    margin-left:auto;
+}
+.header__otpions__progress{
+    height:25px;
+    display:flex;
+    list-style: none;
+    justify-content: space-around;
+    margin: 5px auto;
+    padding:0;
+    width:95%;
+}
+.header__otpions__progress__item{
+    background-color:#7AA93C;
+    height:10px;
+    width: 24%;
+    margin:3px;
+}
+.header__otpions__progress__item__inactive{
+    background-color:#D6D6D6;
+
+}
+@media only screen and (min-width:660px){
+    .header__otpions{
+        width:100%;
+    }
+}
+@media only screen and (max-width:660px){
+    .header__title__otpions{
+        font-size:30px;
+        width:100%;
+    }
+    .container__header__otpions{
+        width:100%;
+    }
+    .header__description__otpions{
+        width:95%;
+        text-align: justify;
+    }
+}

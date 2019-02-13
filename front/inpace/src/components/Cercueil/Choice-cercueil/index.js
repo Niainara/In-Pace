@@ -32,7 +32,7 @@ class ChoiceCercueil extends React.Component {
         }
           <div className="div-btn__cercueil">
             <NavLink to="/choix-des-obseques" className="container__btn__cercueil container__btn-precedent__cercueil" type="button">Précédent</NavLink>
-            <NavLink to="/choix-de-cercueil" className="container__btn__cercueil container__btn-suivant__cercueil" type="button">Suivant</NavLink>
+            <NavLink to="/choix-des-options" className="container__btn__cercueil container__btn-suivant__cercueil" type="button">Suivant</NavLink>
           </div>
         </div>
       </React.Fragment>
