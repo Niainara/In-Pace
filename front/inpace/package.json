@@ -34,6 +34,7 @@
       "sourceType": "module"
     },
     "rules": {
+      "linebreak-style": 0,
       "react/jsx-filename-extension": [
         "js",
         "jsx"
