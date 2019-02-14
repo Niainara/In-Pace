@@ -24,11 +24,17 @@ class ChoiceCercueil extends React.Component {
             <button className={showingStandard ? 'container__btn__cercueil active' : 'container__btn__cercueil'} type="button" onClick={() => this.setState({ showingStandard: !showingStandard, showingSobre: false, showingLuxe: false })}> Standard </button>
             <button className={showingLuxe ? 'container__btn__cercueil active' : 'container__btn__cercueil'} type="button" onClick={() => this.setState({ showingLuxe: !showingLuxe, showingSobre: false, showingStandard: false })}> Luxe </button>
           </div>
-          {showingSobre ? <p className="container__text__cercueil container__text__description__cercueil">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p> : null
+          {showingSobre ? <p className="container__text__cercueil container__text__description__cercueil">Tout cercueil est obligatoirement muni d`une cuvette étanche biodégradable, de 4 poignées et d`une plaque portant les nom et prénom du défunt, ainsi que ses années de naissance et de décès. Cette gamme qui utilise généralement du pin ou du peuplier est la moins coûteuse et ne comprend aucune option.</p> : null
         }
-          {showingStandard ? <p className="container__text__cercueil container__text__description__cercueil">coucou</p> : null
+          {showingStandard ? (
+            <p className="container__text__cercueil container__text__description__cercueil">
+          Les cercueils standards ont un bon rapport qualité prix. Ils sont réalisés dans
+          une matière plus noble et plus solide que les cercueils économiques (par exemple
+          en chêne/ajou) et peuvent davantage être choisis en fonction des goûts du défunt.
+            </p>
+          ) : null
         }
-          {showingLuxe ? <p className="container__text__cercueil container__text__description__cercueil">coucou et recoucou</p> : null
+          {showingLuxe ? <p className="container__text__cercueil container__text__description__cercueil">Les cercueils les plus luxueux ont souvent une forme de coffre. Cette gamme concerne des cercueils souvent personnalisables (grâce à des rajouts décoratifs) qui peuvent se décliner dans les matières les plus prestigieuses (par exemple en acajou). Il est entendu que la personnalisation concerne des ornements classiques et ne prend pas en compte des ornements plus inhabituels ou exclusifs (dont le prix est déterminé au cas par cas).</p> : null
         }
           <div className="div-btn__cercueil">
             <NavLink to="/choix-des-obseques" className="container__btn__cercueil container__btn-precedent__cercueil" type="button">Précédent</NavLink>

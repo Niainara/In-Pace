@@ -14,8 +14,13 @@ const App = () => (
         <Route path="/choix-de-base" exact component={PageBase} />
         <Route path="/choix-des-obseques" exact component={Obseques} />
         <Route path="/choix-de-cercueil" exact component={Cercueil} />
+        <Route path="/utilisation" exact component={Cercueil} />
+        <Route path="/confidentialité" exact component={Cercueil} />
+        <Route path="/cookies" exact component={Cercueil} />
+        <Route path="/contact" exact component={Cercueil} />
       </Switch>
     </BrowserRouter>
-  </div>);
+  </div>
+);
 
 export default App;
