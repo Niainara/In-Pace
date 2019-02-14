@@ -5,6 +5,10 @@ import Accueil from './pages/accueil/index';
 import PageBase from './components/Base/Base';
 import Obseques from './components/Obseques/index';
 import Cercueil from './components/Cercueil/index';
+import Annexe from './components/infos/index';
+import Confident from './components/confident/index';
+import Utile from './components/utile/index';
+import Conta from './components/conta/index';
 
 const App = () => (
   <div>
@@ -14,13 +18,14 @@ const App = () => (
         <Route path="/choix-de-base" exact component={PageBase} />
         <Route path="/choix-des-obseques" exact component={Obseques} />
         <Route path="/choix-de-cercueil" exact component={Cercueil} />
-        <Route path="/utilisation" exact component={Cercueil} />
-        <Route path="/confidentialité" exact component={Cercueil} />
-        <Route path="/cookies" exact component={Cercueil} />
-        <Route path="/contact" exact component={Cercueil} />
+        <Route path="/cookies" component={Annexe} />
+        <Route path="/confidentialité" component={Confident} />
+        <Route path="/utilisation" component={Utile} />
+        <Route path="/contact" component={Conta} />
       </Switch>
     </BrowserRouter>
   </div>
 );
+
 
 export default App;

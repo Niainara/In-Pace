@@ -21,6 +21,8 @@ class Accueil extends Component {
 
   handleReturn() {
     this.setState({ hasClicked: false });
+    this.state = {
+    };
   }
 
   render() {
@@ -56,6 +58,10 @@ class Accueil extends Component {
             <NavLink to="/contact">CONTACT</NavLink>
           </div>
         </div>
+        <NavLink to="/cookies"> Cookies</NavLink>
+        <NavLink to="/confidentialité">Confidentialité</NavLink>
+        <NavLink to="/utilisation">Conditions d`utilisation</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
       </div>
     );
   }
