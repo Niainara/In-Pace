@@ -41,7 +41,7 @@ class Confidentialite extends Component {
         <p className="text">Vos données à caractère personnel peuvent être transférées à des partenaires (comme par exemple les services de pompes funèbres concernés), à l’hébergeur de notre site web, à des tiers en cas d’obligation légale et à la police ou aux autorités judiciaires à leur demande s’ils sont en droit de faire une telle demande.</p>
         <p className="text">Pour les professionnels (pompes funèbres ou autres fournisseurs de services)</p>
         <p className="text">Vos données à caractère personnel peuvent être transférées aux visiteurs du site web, à l’hébergeur de notre site web, à des tiers en cas d’obligation légale et à la police ou aux autorités judiciaires à leur demande s’ils sont en droit de faire une telle demande.</p>
-        <h2 className="subtitle">6.Vos données à caractère personnel sont-elles transférées en dehors de l'Union Européenne ?</h2>
+        <h2 className="subtitle">6.Vos données à caractère personnel sont-elles transférées en dehors de l`Union Européenne ?</h2>
         <p className="text">Nous ne transférons pas vos données à caractère personnel en dehors de l’Union européenne.</p>
         <h2 className="subtitle">7.Combien de temps conserve-t-on vos données à caractère personnel ?</h2>
         <p className="text">Pour les visiteurs du site web</p>
