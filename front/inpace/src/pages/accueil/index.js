@@ -1,25 +1,12 @@
 import React, { Component } from 'react';
 import './index.css';
 import Logo from '../../assets/logo.png';
-import MyForm from '../../components/form-accueil/index';
 import MyForm2 from '../../components/form2-accueil/index';
-
 class Accueil extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hasClicked: false,
     };
-    this.handleContinue = this.handleContinue.bind(this);
-    this.handleReturn = this.handleReturn.bind(this);
-  }
-
-  handleContinue() {
-    this.state.hasClicked = true;
-  }
-
-  handleReturn() {
-    this.state.hasClicked = false;
   }
 
   render() {
@@ -29,7 +16,7 @@ class Accueil extends Component {
           <div className="mainpage__card">
             <img src={Logo} alt="logo" height="50px" width="200px" className="mainpage__card__logo" />
             <div className="mainpage__card__text">
-              <p>CONSULTEZ LES POMPES FUNEBRES DISPONIBLES EN TOUTE CONFIANCE</p>
+              <p>CONSULTEZ LES POMPES FUNEBRES DISPONIBLES EN TOUTE CONFIANCE ET LES TARIFS APPLICABLES</p>
             </div>
             <div className="mainpage__button">
               <a href="#nextpage"> NEXT </a>
@@ -42,9 +29,7 @@ class Accueil extends Component {
             <p>AFIN DE PREPARER LES FUNERAILLES DANS LES MEILLEURES CONDITIONS</p>
           </div>
           <div className="nextpage__form">
-            {(!this.setSstate.hasClicked)
-              ? <MyForm handleContinue={this.handleContinue} />
-              : <MyForm2 handleReturn={this.handleReturn} />}
+            <MyForm2 />
           </div>
           <div className="nextpage__footer">
             <div>CONDITIONS D&apos;UTILISATION</div>
