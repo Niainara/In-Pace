@@ -41,8 +41,7 @@
 
 .nextpage__sentence {
 	text-align: center;
-	font-size: 1.6em;
-	padding: 40px 12.5vw 0px 12.5vw;
+	font-size: 20px;
 	width:80%;
 	margin:0;
 }
@@ -56,11 +55,6 @@
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-}
-
-.nextpage__form__text {
-	padding: 30px;
-	flex-basis: 30vw;
 }
 
 .nextpage__form__button {

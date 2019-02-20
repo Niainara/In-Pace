@@ -17,9 +17,9 @@ const rootReducer = combineReducers({
 })
 
 //création du store auquel on passe nos reducers ainsi qu'une fonction permettant d'utiliser l'utilitaire redux sur navigateur
-const store = createStore(rootReducer, devToolsEnhancer());
+const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
-//On encapsule notre App dans le provider redux ainsi que le provider material UI
+//On encapsule notre App dans le provider redux, le router redux ainsi que le provider material UI
 ReactDOM.render(<Provider store={store}><MuiThemeProvider muiTheme={getMuiTheme()}><App /></MuiThemeProvider></Provider>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

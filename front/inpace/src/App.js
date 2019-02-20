@@ -6,6 +6,7 @@ import PageBase from './components/Base/Base';
 import Obseques from './components/Obseques/index';
 import Cercueil from './components/Cercueil/index';
 import Options from './components/Options/index';
+import MyForm2 from './components/form2-accueil/index';
 
 const App = () => (
   <div>
@@ -16,6 +17,8 @@ const App = () => (
         <Route path="/choix-des-obseques" exact component={Obseques} />
         <Route path="/choix-de-cercueil" exact component={Cercueil} />
         <Route path="/choix-des-options" exact component={Options} />
+        <Route path="/choix-de-base" component={PageBase} />
+        <Route path="/accueil2" render={(props) => <Accueil {...props} Form={MyForm2} />} />
       </Switch>
     </BrowserRouter>
   </div>);

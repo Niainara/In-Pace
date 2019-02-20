@@ -79,6 +79,7 @@
 .div-btn__options__section__description__item.height__change{
     height:10%;
     display:flex;
+    background-color: #F8F8F8;
 }
 .div-btn__options__section__description__item--change.height__change{
     height:10%;
