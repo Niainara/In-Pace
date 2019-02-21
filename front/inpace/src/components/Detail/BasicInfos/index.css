@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: url('Montserrat-Thin.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('Montserrat-SemiBold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container__basic-infos__header{
+    background-image: url('./basic.jpg');
+    width:100%;
+    height:500px;
+    display:flex;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:20px;
+    background-size: cover;
+}
+
+.container__basic-infos__title{
+    text-align: center;
+    font-family: "Montserrat-SemiBold";
+    text-transform: uppercase;
+    font-size: 3em;
+    color:white;
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+.container__basic-infos__contact{
+    display: flex;
+    flex-direction: row;
+    margin:50px auto;
+}
+.container__basic-infos__contact__infos{
+    display: flex;
+    flex-direction: column;
+    margin: 0 100px;
+}
+.container__basic-infos__contact__map{
+    background-image: url('./Capturemap.JPG');
+    width: 100%;
+    height: 350px;
+    background-repeat: no-repeat;
+    display: flex;
+    background-position: center;
+}
+@media only screen and (min-width:660px){
+    .container__basic-infos__header{
+        width:100%;
+    }
+}
+@media only screen and (max-width:660px){
+    .header__title__cercueil{
+        font-size:30px;
+        width:100%;
+    }
+    .container__basic-infos__header{
+        width:100%;
+    }
+    .header__description__cercueil{
+        width:95%;
+        text-align: justify;
+    }
+}

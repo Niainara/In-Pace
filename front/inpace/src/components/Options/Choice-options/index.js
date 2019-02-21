@@ -311,7 +311,7 @@ class ChoiceOptions extends React.Component {
           </div>
           <div className="div-btn__options">
             <NavLink to="/choix-de-cercueil" className="container__btn__options container__btn-precedent__options">Précédent</NavLink>
-            <NavLink to="/choix-des-options" className="container__btn__options container__btn-suivant__options">Suivant</NavLink>
+            <NavLink to="/detail" className="container__btn__options container__btn-suivant__options">Suivant</NavLink>
           </div>
         </div>
       </React.Fragment>
