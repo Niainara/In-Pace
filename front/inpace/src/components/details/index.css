@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: url('Montserrat-Thin.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('Montserrat-SemiBold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+.container__details{
+    background-image: url('./banana.jpg');
+    width:100%;
+    height:500px;
+    display:flex;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:20px;
+    background-size: cover;
+}
+.container__details__title{
+    text-align: center;
+    font-family: "Montserrat-SemiBold";
+    text-transform: uppercase;
+    font-size: 1.70em;
+}
+.container__details__subtitle{
+    font-family: "Montserrat-SemiBold";
+    text-transform: uppercase;
+    font-size: 1em;
+    margin-top: 75px;
+    
+}
+.container__details__map{
+    margin-left: 800px;
+}
+.container__details__texte{
+    text-align: center;
+    
+}
+.container__details__main{
+    padding: 0px 200px 0px 200px;
+}
+.container__details__contact{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.container__details__icons{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    flex-wrap: nowrap;
+}
+.container__details__icons__{
+    display: flex;
+    flex-direction: row;
+}
