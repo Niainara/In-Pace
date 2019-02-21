@@ -1,8 +1,11 @@
 // tslint:disable-next-line:max-line-length
 import React, { Component } from 'react';
 import './index.css';
+import { NavLink } from 'react-router-dom';
 import Logo from '../../assets/logo.png';
 import MyForm2 from '../../components/form2-accueil/index';
+import Arrow from '../../assets/arrow.svg';
+
 
 class Accueil extends Component {
   constructor(props) {
@@ -15,31 +18,41 @@ class Accueil extends Component {
     return (
       <div className="index">
         <div className="mainpage">
-          <div className="mainpage__card">
-            <img src={Logo} alt="logo" height="50px" width="200px" className="mainpage__card__logo" />
-            <div className="mainpage__card__text">
-              <p>CONSULTEZ LES POMPES FUNEBRES DISPONIBLES EN TOUTE CONFIANCE ET LES TARIFS APPLICABLES</p>
-            </div>
-            <div className="mainpage__button">
-              <a href="#nextpage"> NEXT </a>
+          <div className="mainpage__black">
+            <div className="mainpage__card">
+              <img src={Logo} alt="logo" height="50px" width="200px" className="mainpage__card__logo" />
+              <div className="mainpage__border__button">
+                <div className="mainpage__card__text">
+                  <p>CONSULTEZ LES POMPES FUNEBRES DISPONIBLES ET LES TARIFS APPLICABLES</p>
+                </div>
+                <a className="mainpage__button" href="#nextpage">
+                  <img className="down__arrow" src={Arrow} alt="" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
         <div id="nextpage" className="nextpage">
+          {/*
           <div className="nextpage__sentence">
-            <p>FAITES NOUS CONFIANCE ET COMMENCEZ A CHERCHER LES SERVICES QUI VOUS CONVIENNENT</p>
-            <p>AFIN DE PREPARER LES FUNERAILLES DANS LES MEILLEURES CONDITIONS</p>
+            <p className="nextpage__sentence__text">FAITES NOUS CONFIANCE ET COMMENCEZ A CHERCHER LES SERVICES QUI VOUS CONVIENNENT</p>
+            <p className="nextpage__sentence__text">AFIN DE PREPARER LES FUNERAILLES DANS LES MEILLEURES CONDITIONS</p>
           </div>
+          */}
           <div className="nextpage__form">
             <MyForm2 />
           </div>
           <div className="nextpage__footer">
-            <div>CONDITIONS D&apos;UTILISATION</div>
-            <div>POLITIQUES DE CONFIDENTIALITE</div>
-            <div>POLITIQUE D&apos;UTILISATION DES COOKIES</div>
-            <div>CONTACT</div>
+            <NavLink to="/utilisation">CONDITIONS D&apos;UTILISATION</NavLink>
+            <NavLink to="/confidentialité">POLITIQUES DE CONFIDENTIALITE</NavLink>
+            <NavLink to="/cookies">POLITIQUE D&apos;UTILISATION DES COOKIES</NavLink>
+            <NavLink to="/contact">CONTACT</NavLink>
           </div>
         </div>
+        <NavLink to="/cookies"> Cookies</NavLink>
+        <NavLink to="/confidentialité">Confidentialité</NavLink>
+        <NavLink to="/utilisation">Conditions d`utilisation</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
       </div>
     );
   }

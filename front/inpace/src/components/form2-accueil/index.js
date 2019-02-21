@@ -38,26 +38,28 @@ const renderTextField = ({
 const MyForm2 = () => (
   <div className="form">
     <div className="form__block">
-      <div className="form__block__description">
-        <p className="nextpage__form__text">Cette donnée est nécessaire pour vous envoyer (si les désirez) un récapitulatif des services disponibles et assurer la qualité du référencement.</p>
-        <p className="nextpage__form__text">Cette donnée est nécessaire afin de vous fournir un aperçu des pompes funèbres disponibles dans votre région</p>
-      </div>
       <div className="nextpage__form">
         <form className="form__fields">
-          <Field name="mailContact" component={renderTextField} label="ADRESSE MAIL DE CONTACT" />
-          <Field name="lieuFunerailles" component={SelectField} hintText="REGION PROBABLE DES FUNERAILLES" label="REGION PROBABLE DES FUNERAILLES">
-            <MenuItem value="ANVERS" primaryText="Province d'Anvers" />
-            <MenuItem value="BF" primaryText="Province du Brabant flamand" />
-            <MenuItem value="BW" primaryText="Province du Brabant wallon" />
-            <MenuItem value="BRU" primaryText="Région Bruxelles-Capitale" />
-            <MenuItem value="F-OCC" primaryText="Province de Flandre-Occidentale" />
-            <MenuItem value="F-OR" primaryText="Province de Flandre-Orientale" />
-            <MenuItem value="HAI" primaryText="Province du Hainaut" />
-            <MenuItem value="LIEGE" primaryText="Province de Liège" />
-            <MenuItem value="LIM" primaryText="Province du Limbourg" />
-            <MenuItem value="LUX" primaryText="Province du Luxembourg" />
-            <MenuItem value="NAM" primaryText="Province de Namur" />
-          </Field>
+          <div className="form__fields__item">
+            <Field name="mailContact" component={renderTextField} label="ADRESSE MAIL DE CONTACT" />
+            <p className="nextpage__form__text">Cette donnée est nécessaire pour vous envoyer (si les désirez) un récapitulatif des services disponibles et assurer la qualité du référencement.</p>
+          </div>
+          <div className="form__fields__item">
+            <Field name="lieuFunerailles" component={SelectField} hintText="REGION PROBABLE DES FUNERAILLES" label="REGION PROBABLE DES FUNERAILLES">
+              <MenuItem value="ANVERS" primaryText="Province d'Anvers" />
+              <MenuItem value="BF" primaryText="Province du Brabant flamand" />
+              <MenuItem value="BW" primaryText="Province du Brabant wallon" />
+              <MenuItem value="BRU" primaryText="Région Bruxelles-Capitale" />
+              <MenuItem value="F-OCC" primaryText="Province de Flandre-Occidentale" />
+              <MenuItem value="F-OR" primaryText="Province de Flandre-Orientale" />
+              <MenuItem value="HAI" primaryText="Province du Hainaut" />
+              <MenuItem value="LIEGE" primaryText="Province de Liège" />
+              <MenuItem value="LIM" primaryText="Province du Limbourg" />
+              <MenuItem value="LUX" primaryText="Province du Luxembourg" />
+              <MenuItem value="NAM" primaryText="Province de Namur" />
+            </Field>
+            <p className="nextpage__form__text nextpage__form__text--change">Cette donnée est nécessaire afin de vous fournir un aperçu des pompes funèbres disponibles dans votre région</p>
+          </div>
         </form>
       </div>
     </div>
@@ -66,7 +68,9 @@ const MyForm2 = () => (
         <Field name="informations" component={Toggle} />
         <p className="form__submit__toggle__text">Je désire recevoir des informations sur les démarches administratives à effectuer après les funérailles (Succession, pension, résiliation de contrat, remboursements, etc.)</p>
       </div>
-      <NavLink to="/choix-de-base"><button type="submit" className="nextpage__form__button">CONTINUER</button></NavLink>
+    </div>
+    <div className="form__submit__btn">
+      <NavLink className="form__submit__btn" to="/choix-de-base"><button type="submit" className="nextpage__form__button">CONTINUER</button></NavLink>
     </div>
   </div>
 );
