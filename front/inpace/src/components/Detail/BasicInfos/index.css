@@ -37,6 +37,7 @@
     display: flex;
     flex-direction: row;
     margin:50px auto;
+    justify-content: center;
 }
 .container__basic-infos__contact__infos{
     display: flex;
@@ -51,6 +52,26 @@
     display: flex;
     background-position: center;
 }
+.container__basic-infos__description{
+    background-color:#F5F5F5;
+    height: 100%;
+    margin-top: 80px;
+}
+.container__basic-infos__description__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: 20px auto;
+    padding: 100px 0;
+}
+.container__basic-infos__description__titre{
+    font-family: "Montserrat-SemiBold";
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+
 @media only screen and (min-width:660px){
     .container__basic-infos__header{
         width:100%;

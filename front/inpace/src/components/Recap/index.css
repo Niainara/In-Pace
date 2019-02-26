@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: url('Montserrat-Thin.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('Montserrat-SemiBold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container__details__recap__subtitle{
+    font-family: "Montserrat-SemiBold";
+    text-transform: uppercase;
+    font-size: 1.3em;
+    text-align: center;
+}
+.container__details__recap{
+    margin-top:40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container__details__recap__content{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:100%;
+}
+.container__details__recap__devis{
+    width: 40%;
+    height:100%;
+}
+.container__details__recap__devis__content{
+    background-color: white;
+}
+.container__details__recap__devis__titre{
+    font-family: "Montserrat-SemiBold";
+    text-transform: uppercase;
+    font-size: 1em;
+    text-align: center;
+}
+.container__details__recap__devis__item{
+    height:300px;
+    margin: 30px 0;
+}
+.container__details__recap__devis__item__titre{
+    background-color: #7aa93c;
+    text-align: center;
+    padding: 10px;
+    font-family: "Montserrat-SemiBold";
+    font-size: 0.9em;
+    text-align: center;
+    color:white;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.container__details__recap__devis__item__liste__item{
+    padding: 0 20px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container__details__recap__devis__item__liste__item.change__color{
+    background-color: #F5F5F5;
+}
+.container__details__recap__devis__item__total{
+    background-color: #7aa93c;
+    text-align: center;
+    padding: 10px;
+    font-family: "Montserrat-SemiBold";
+    font-size: 0.9em;
+    text-align: center;
+    color:white;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.container__details__recap__non-inclus{
+    width: 40%;
+    height:100%;
+}
+.container__details__recap__non-inclus__titre{
+    font-family: "Montserrat-SemiBold";
+    text-transform: uppercase;
+    font-size: 1em;
+    text-align: center;
+}
+.container__details__recap__non-inclus__item{
+    height: 300px;
+    margin: 30px 0;
+}
+
+.container__details__recap__non-inclus__item__liste__item{
+    padding: 0 20px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 3px;
+}
+.container__details__recap__non-inclus__item__liste__item.change__color{
+    background-color: #F5F5F5;
+}
+.container__details__non-inlus{
+    height: 20px;
+    margin: auto 0;
+    border:none;
+    border-radius: 3px;
+    width:50px;
+    color:white;
+    background-color: #7aa93c;
+    cursor: pointer;
+}
+.container__details__non-inlus:hover{
+    background-color: rgb(158, 218, 79);
+}
+
+.container__details__recap__explications__texte__cadre{
+    background-color: #F5F5F5;
+    margin: 3% 5% 1% 5%;
+    padding: 20px;
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.container__details__recap__explications__texte__item{
+    width: 80%;
+    margin: 20px auto;
+}
+.container__details__recap__explications__send-mail{
+    display:flex;
+    flex-direction: row;
+    margin: 60px 5%;
+    border-top: 1px solid rgb(190, 190, 190);
+    padding-top: 30px;
+}
+.container__details__recap__explications__send-mail__btn{
+    height: 40px;
+    margin: auto 20px auto 0;
+    border:none;
+    border-radius: 3px;
+    width:100px;
+    color:white;
+    background-color: #7aa93c;
+    cursor: pointer;
+}
+.texte-souligne{
+    text-decoration: underline;
+}

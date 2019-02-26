@@ -6,7 +6,7 @@ class ChoiceObs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showingCremation: true,
+      showingCremation: false,
       showingInhumation: false,
     };
   }
