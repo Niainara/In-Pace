@@ -9,6 +9,7 @@ import Annexe from './components/infos/index';
 import Confident from './components/confident/index';
 import Utile from './components/utile/index';
 import Conta from './components/conta/index';
+import Avis from './components/avis-icons/index';
 
 const App = () => (
   <div>
@@ -24,6 +25,7 @@ const App = () => (
         <Route path="/contact" component={Conta} />
       </Switch>
     </BrowserRouter>
+    <Avis />
   </div>
 
 );
