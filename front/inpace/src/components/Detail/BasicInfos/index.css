@@ -71,6 +71,9 @@
     text-transform: uppercase;
     font-size: 1.3em;
 }
+.container__basic-infos__avis {
+    background-color: #F5F5F5;
+}
 
 @media only screen and (min-width:660px){
     .container__basic-infos__header{

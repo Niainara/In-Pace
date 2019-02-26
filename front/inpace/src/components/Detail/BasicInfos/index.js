@@ -2,6 +2,7 @@ import React from 'react';
 import './index.css';
 import SimpleMap from '../../map/index';
 import RecapDevis from '../../Recap/index';
+import Avis from '../../avis-icons/index';
 
 class DetailHeader extends React.Component {
   constructor(props) {
@@ -25,7 +26,9 @@ class DetailHeader extends React.Component {
             </p>
             <p className="container__basic-infos__contact__infos__items">01/234/56.78</p>
           </div>
-          <SimpleMap />
+          <div>
+            <SimpleMap />
+          </div>
         </div>
         <div className="container__basic-infos__description">
           <div className="container__basic-infos__description__content">
@@ -45,6 +48,9 @@ class DetailHeader extends React.Component {
           </div>
         </div>
         <RecapDevis />
+        <div className="container__basic-infos__avis">
+          <Avis />
+        </div>
       </div>
     );
   }

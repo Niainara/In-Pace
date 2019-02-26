@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: url('Montserrat-Thin.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('Montserrat-SemiBold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+.container__main{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Montserrat-Thin';
+}
+.container__avis__main{
+    width: 40%;
+}
+.container__icons__main{
+    width: 40%;
+    height: 500px;
+}
+.container__title__icons{
+    text-align: center;
+    font-family: 'Montserrat-SemiBold';
+    font-size: 2.2em;
+    margin-top: 20px;
+}
+.container__text__main img{
+    transform: translate(-50%);
+    margin-left: 50%;
+    display: inline-block;
+}
+.container__text__principal{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    margin-top: 40px;
+    border-left: 1px solid rgb(190, 190, 190);
+ }
+.container__avis__author{
+    font-family: 'Montserrat-SemiBold';
+    text-decoration: underline;
+    margin-top: 50px;
+}
+.container__avis__text{
+    border-radius: 4px;
+    background-color: white;
+    margin-bottom: 40px;
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.3);
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+.checked{
+    color: #7AA93C;
+}
+
+.comments__date{
+    width: 100px;
+}
+.container__avis__text__circles{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container__avis{
+    width: 80%;
+    margin: auto;
+}
+.container__main__avis__content{
+    width:50%;
+}
+.container__text__main{
+    display: flex;
+    margin:5px;
+}
