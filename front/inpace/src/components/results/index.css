@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: url('Montserrat-Thin.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('Montserrat-SemiBold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+.container__results__title{
+    text-align: center;
+    font-family: 'Montserrat-SemiBold';
+    font-size: 2.5em;
+    margin-bottom: 60px;
+}
+.checked{
+    color: #7AA93c;
+}
+.checked:hover{
+    color: black;
+}
+.container__results__main{
+    font-family: 'Montserrat-Thin';
+    display: flex;
+    justify-content: space-around;
+}
+.container__results__box{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.3);
+}
+.container__results__name{
+    font-size: 1.4em;
+    padding: 5px;
+}
+.container__results__map__title{
+    font-family: "Montserrat-Thin";
+    font-size: 2em;
+    text-align: center;
+}
+.container__results__aka{
+    display: flex;
+    flex-direction: row;
+}
+.container__results__price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.container__results__avatar{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.container__results__adresse{
+    font-size: 16px;
+}
+.container__results__nom{
+    margin-bottom: 5px;
+}
+.container__bouton__results{
+    width: 100px;
+    height: 40px;
+    color: white !important;
+    background-color: #7AA93c;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+.container__bouton__results:hover{
+    color:red !important;
+    background-color: white;
+}
+.container__results__prix{
+    color:red;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Montserrat-SemiBold';
+}
+.container__results__map{
+    padding-top: 40px;
+}
+.bouton__results{
+    color: white !important;
+}
+.container__results__stars{
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
