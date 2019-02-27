@@ -5,3 +5,7 @@
 .subtitle{
     text-align: center;
 }
+.container__utilisation{
+    width: 90%;
+    margin: 0 auto;
+}

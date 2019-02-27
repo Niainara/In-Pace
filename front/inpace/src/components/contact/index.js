@@ -11,7 +11,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <div id="container">
+      <div id="container" className="container__utilisation">
         <h1 id="title">Contact</h1>
         <p className="text">Adresse postale : IN PACE, Rue Henri Stacquet 12, 1030 Schaerbeek</p>
         <p className="text">Email : info@in-pace.be</p>

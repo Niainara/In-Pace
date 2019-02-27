@@ -32,10 +32,12 @@
     margin-right:auto;
     margin-left:auto;
     justify-content: center;
+    cursor: pointer;
 }
 .container__btn__cercueil.active{
     background-color:#7AA93C;
     color:white;
+    pointer-events: none;
 }
 .container__btn__cercueil:hover{
     background-color:#7AA93C;
@@ -52,6 +54,9 @@
     text-decoration: none;
     display: flex;
     align-items: center;
+}
+.container__btn-suivant__cercueil:hover{
+    background-color: rgb(158, 218, 79);
 }
 .container__btn-precedent__cercueil{
     background-color: #CCCCCC;

@@ -43,6 +43,8 @@
     text-transform: uppercase;
     font-family: 'Montserrat-Thin';
     font-weight: bold;
+    margin-right: 20px;
+    margin-left: 20px;
   }
   
   .nav__links__item:hover{

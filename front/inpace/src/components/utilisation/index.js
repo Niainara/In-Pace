@@ -12,7 +12,7 @@ class Utilisation extends Component {
 
   render() {
     return (
-      <div id="container">
+      <div id="container" className="container__utilisation">
         <h1 id="title">Conditions d’utilisation du site internet www.in-pace.be</h1>
         <h2 className="subtitle">1.Généralités</h2>
         <p className="text">En utilisant ce site internet, le visiteur marque son accord avec les présentes conditions d’utilisation. IN PACE se réserve le droit de modifier les présentes conditions à tout moment et sans avertissement préalable.</p>

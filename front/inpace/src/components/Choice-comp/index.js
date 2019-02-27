@@ -11,6 +11,7 @@ class Choice extends React.Component {
       showingThree: false,
     };
   }
+  
 
   render() {
     const { showingOne } = this.state;
@@ -20,9 +21,9 @@ class Choice extends React.Component {
       <React.Fragment>
         <div className="container__base">
           <div className="div-btn__base">
-            <button className={showingOne ? 'container__btn__base active' : 'container__btn__base'} type="button" onClick={() => this.setState({ showingOne: !showingOne, showingTwo: false, showingThree: false })}> Enlèvement, transport et corbillard </button>
-            <button className={showingTwo ? 'container__btn__base active' : 'container__btn__base'} type="button" onClick={() => this.setState({ showingTwo: !showingTwo, showingOne: false, showingThree: false })}> Soin et mise en bière du defunt </button>
-            <button className={showingThree ? 'container__btn__base active' : 'container__btn__base'} type="button" onClick={() => this.setState({ showingThree: !showingThree, showingTwo: false, showingOne: false })}> Démarches administratives </button>
+            <button className='container__btn__base' type="button" onClick={() => this.setState({ showingOne: !showingOne, showingTwo: false, showingThree: false })}> Enlèvement, transport et corbillard </button>
+            <button className='container__btn__base' type="button" onClick={() => this.setState({ showingTwo: !showingTwo, showingOne: false, showingThree: false })}> Soin et mise en bière du defunt </button>
+            <button className='container__btn__base' type="button" onClick={() => this.setState({ showingThree: !showingThree, showingTwo: false, showingOne: false })}> Démarches administratives </button>
           </div>
           {showingOne ? (
             <p className="container__text__base container__text__description__base">

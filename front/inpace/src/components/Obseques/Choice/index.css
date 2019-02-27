@@ -32,10 +32,12 @@
     margin-right:auto;
     margin-left:auto;
     justify-content: center;
+    cursor: pointer;
 }
 .container__btn__obs.active{
     background-color:#7AA93C;
     color:white;
+    pointer-events: none;
 }
 .container__btn__obs:hover{
     background-color:#7AA93C;
@@ -53,6 +55,10 @@
     display: flex;
     align-items: center;
 }
+.container__btn-suivant__obs:hover{
+    background-color: rgb(158, 218, 79);
+}
+
 .container__btn-precedent__obs{
     background-color: #CCCCCC;
     color:white;

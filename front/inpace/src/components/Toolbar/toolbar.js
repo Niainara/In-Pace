@@ -2,6 +2,7 @@
 import React from 'react';
 import './toolbar.css';
 import Inpace from './inpace.png';
+import { NavLink } from 'react-router-dom';
 
 class Toolbar extends React.Component {
   constructor(props) {
@@ -23,10 +24,9 @@ class Toolbar extends React.Component {
         </div>
         <input type="checkbox" id="nav-check" />
         <div className="nav__links">
-          <a className="nav__links__item" href="google.com" target="_blank">Accueil</a>
-          <a className="nav__links__item" href="google.com" target="_blank">Accueil</a>
-          <a className="nav__links__item" href="google.com" target="_blank">Accueil</a>
-          <a className="nav__links__item" href="google.com" target="_blank">Accueil</a>
+          <NavLink to="/"><a className="nav__links__item" href="google.com" target="_blank">Accueil</a></NavLink>
+          <NavLink to="/"><a className="nav__links__item" href="google.com" target="_blank">F.A.Q</a></NavLink>
+          <NavLink to="/contact"><a className="nav__links__item" href="google.com" target="_blank">Contact</a></NavLink>
         </div>
       </div>
     );

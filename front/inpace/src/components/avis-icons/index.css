@@ -80,3 +80,20 @@
     display: flex;
     margin:5px;
 }
+.container__details__recap__retour-resultats{
+    display:flex;
+    justify-content: center;
+    margin: -20px auto 40px 0;
+}
+.container__details__recap__retour-resultats__btn{
+    height: 40px;
+    border:none;
+    border-radius: 3px;
+    color:white;
+    background-color: #7aa93c;
+    cursor: pointer;
+    width:80%;
+}
+.container__details__recap__retour-resultats__btn:hover{
+    background-color: rgb(158, 218, 79);
+}

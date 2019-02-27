@@ -4,40 +4,40 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
-	obseques: state.obsequesReducer
+  obseques: state.obsequesReducer,
 });
 
 const mapDispatchToProps = dispatch => ({
-	onCremation: () => dispatch({ type: "CREMATION" }),
-	onInhumation: () => dispatch({ type: "INHUMATION" })
+  onCremation: () => dispatch({ type: 'CREMATION' }),
+  onInhumation: () => dispatch({ type: 'INHUMATION' }),
 });
 
 class ChoiceObs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showingCremation: false,
+      showingCremation: true,
       showingInhumation: false,
     };
-		this.handleCremation = this.handleCremation.bind(this);
-		this.handleInhumation = this.handleInhumation.bind(this);
-	}
-	
-	handleCremation() {
-		const { showingCremation } = this.state;
-		const { showingInhumation } = this.state;
-		this.setState({ showingCremation: !showingCremation, showingInhumation: false });
-		this.props.onCremation();
-	}
+    this.handleCremation = this.handleCremation.bind(this);
+    this.handleInhumation = this.handleInhumation.bind(this);
+  }
 
-	handleInhumation() {
-		const { showingCremation } = this.state;
-		const { showingInhumation } = this.state;
-		this.setState({ showingInhumation: !showingInhumation, showingCremation: false });
-		this.props.onInhumation();
-	}
+  handleCremation() {
+    const { showingCremation } = this.state;
+    const { showingInhumation } = this.state;
+    this.setState({ showingCremation: !showingCremation, showingInhumation: !showingInhumation });
+    this.props.onCremation();
+  }
 
-		render() {
+  handleInhumation() {
+    const { showingCremation } = this.state;
+    const { showingInhumation } = this.state;
+    this.setState({ showingInhumation: !showingInhumation, showingCremation: !showingCremation });
+    this.props.onInhumation();
+  }
+
+  render() {
     const { showingCremation } = this.state;
     const { showingInhumation } = this.state;
     return (

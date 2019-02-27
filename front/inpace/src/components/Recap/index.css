@@ -144,6 +144,9 @@
     padding-top: 30px;
     padding-bottom: 30px;
 }
+.texte-souligne{
+    text-decoration: underline;
+}
 .container__details__recap__explications__send-mail__btn{
     height: 40px;
     margin: auto 20px auto 0;
@@ -154,6 +157,6 @@
     background-color: #7aa93c;
     cursor: pointer;
 }
-.texte-souligne{
-    text-decoration: underline;
+.container__details__recap__explications__send-mail__btn:hover{
+    background-color: rgb(158, 218, 79);
 }

@@ -24,7 +24,6 @@
     text-align:center;
     text-transform: uppercase;
     font-family: "Montserrat-SemiBold";
-    background-color: #F8F8F8;
     letter-spacing: 2px;
     padding:20px;
     border:3px solid rgb(214, 214, 214);
@@ -32,15 +31,11 @@
     margin-right:auto;
     margin-left:auto;
     justify-content: center;
-}
-.container__btn__base.active{
     background-color:#7AA93C;
     color:white;
+    cursor: pointer;
 }
-.container__btn__base:hover{
-    background-color:#7AA93C;
-    color:white;
-}
+
 .container__btn-suivant__base{
     background-color: #7AA93C;
     color:white;
@@ -54,6 +49,10 @@
     align-items: center;
     
 }
+.container__btn__base:hover{
+    background-color: rgb(158, 218, 79);
+}
+
 .container__btn-precedent__base{
     background-color: #CCCCCC;
     color:white;
@@ -114,7 +113,7 @@
         text-align:center;
         text-transform: uppercase;
         font-family: "Montserrat-SemiBold";
-        background-color: #F8F8F8;
+        background-color:#7AA93C;
         letter-spacing: 2px;
         padding:20px;
         border:3px solid rgb(214, 214, 214);
@@ -123,15 +122,12 @@
         margin-left:auto;
         justify-content: center;
         cursor: pointer;
-    }
-    .container__btn__base:active{
-        background-color:#7AA93C;
         color:white;
     }
     .container__btn__base:hover{
-        background-color:#7AA93C;
-        color:white;
+        background-color: rgb(158, 218, 79);
     }
+   
     .container__btn-suivant__base{
         background-color: #7AA93C;
         color:white;

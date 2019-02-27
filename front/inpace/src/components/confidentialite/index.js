@@ -10,7 +10,7 @@ class Confidentialite extends Component {
 
   render() {
     return (
-      <div id="container">
+      <div id="container" className="container__utilisation">
         <h1 id="title">Charte de confidentialité</h1>
         <h2 className="subtitle">1.En quoi consiste cette charte de confidentialité ?</h2>
         <p className="text">Cette charte s’applique à vos données à caractère personnel (en tant que personne physique) que nous traitons.</p>

@@ -11,7 +11,7 @@ class Cookie extends Component {
 
   render() {
     return (
-      <div id="container">
+      <div id="container" className="container__utilisation">
         <h1 id="title">Politique d`utilisation des cookies</h1>
         <p className="text">Cette politique a pour objectif de vous expliquer la manière dont le site www.in-pace.be (ci-après le « Site ») utilise les cookies. La simple visite et utilisation du Site par le visiteur marque son accord avec les termes de la présente politique d’utilisation des cookies.</p>
         <h2 className="subtitle">1.Qu`est-ce qu`un cookie ?</h2>
