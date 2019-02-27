@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import Accueil from './pages/accueil/index';
 import PageBase from './components/Base/Base';
 import Obseques from './components/Obseques/index';
@@ -12,6 +12,8 @@ import Confident from './components/confident/index';
 import Utile from './components/utile/index';
 import Conta from './components/conta/index';
 import Detail from './components/Detail/index';
+import Results from './components/results/index';
+
 
 const App = () => (
   <div>
@@ -28,6 +30,7 @@ const App = () => (
         <Route path="/confidentialité" component={Confident} />
         <Route path="/utilisation" component={Utile} />
         <Route path="/contact" component={Conta} />
+        <Route path="/resultats" component={Results} />
         <Route path="/detail" component={Detail} />
       </Switch>
     </BrowserRouter>

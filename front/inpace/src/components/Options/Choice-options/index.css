@@ -61,6 +61,10 @@
     color: rgb(105, 105, 105);
     border-radius: 8px;
 }
+.div-btn__options__section__description__item.height__change:hover{
+    background-color: #7AA93C;
+    color: white;
+}
 .div-btn__options__section__description__item--change{
     background-color: #7AA93C;
     height: 30%;
@@ -75,6 +79,7 @@
     text-transform: uppercase;
     font-family: "Montserrat-SemiBold";
     color:white;
+    pointer-events: none;
 }
 .div-btn__options__section__description__item.height__change{
     height:10%;
