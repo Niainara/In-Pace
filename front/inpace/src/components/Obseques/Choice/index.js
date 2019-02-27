@@ -23,6 +23,10 @@ class ChoiceObs extends React.Component {
     this.handleInhumation = this.handleInhumation.bind(this);
   }
 
+  componentDidMount(){
+    window.scrollTo(0, 0);
+  }
+
   handleCremation() {
     const { showingCremation } = this.state;
     const { showingInhumation } = this.state;

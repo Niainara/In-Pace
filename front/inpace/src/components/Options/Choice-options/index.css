@@ -129,6 +129,13 @@
     background-color: #CCCCCC;
 
 }
+.container__btn-precedent__options:hover{
+    background-color: #7AA93C;
+
+}
+.container__btn-suivant__options:hover{
+    background-color: rgb(158, 218, 79);
+}
 
 @media only screen and (max-width: 768px) {
     .photo-header__options{
@@ -199,6 +206,7 @@
         line-height: 7px;
         width:150px;
     }
+
     .container__btn-precedent__options{
         background-color: #CCCCCC;
         color:white;
@@ -208,7 +216,10 @@
         line-height: 7px;
     }
 }
-
+.div-btn__options__section__description__item__photo{
+    height:120px;
+    padding-right: 40px;
+}
 @media only screen and (max-width: 1120px){
     .div-btn__options__section__description__item{
         flex-direction: column;
@@ -219,6 +230,9 @@
         background-color: white;
     }
     .div-btn__options__section__description__item__photo{
+        width:100px;
+        height:100px;
+        padding-bottom: 20px;
         margin-bottom:-220px;
     }
     .div-btn__options__section__description__item__selection{
@@ -233,5 +247,24 @@
     }
     .div-btn__options--background{
         height:700px;
+    }
+}
+
+@media only screen and (max-width: 532px){
+    .div-btn__options__section__description__item__photo{
+        width:80px;
+        height:80px;
+        margin-left: 40px;
+        padding-bottom: 20px;
+        margin-bottom:-220px;
+    }
+    .div-btn__options__section__description__item__text{
+        margin-right: auto;
+    }
+    .div-btn__options__section__description__item__selection{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }

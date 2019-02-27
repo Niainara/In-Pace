@@ -1,12 +1,12 @@
 // cercueilReducer.js
-const cercueilReducer = (state = 'sobre', action) => {
+const cercueilReducer = (state = 'cercueil-sobre', action) => {
   switch (action.type) {
-    case 'SOBRE':
-      return state = "sobre";
-    case 'STANDARD':
-      return state = "standard";
-    case 'LUXE':
-      return state = "luxe";
+    case 'CERCUEILSOBRE':
+      return state = "cercueil-sobre";
+    case 'CERCUEILSTANDARD':
+      return state = "cercueil-standard";
+    case 'CERCUEILLUXE':
+      return state = "cercueil-luxe";
     default:
       return state;
   }

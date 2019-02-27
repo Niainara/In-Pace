@@ -11,7 +11,10 @@ class Choice extends React.Component {
       showingThree: false,
     };
   }
-  
+
+  componentDidMount(){
+    window.scrollTo(0, 0);
+  }
 
   render() {
     const { showingOne } = this.state;

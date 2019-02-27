@@ -13,6 +13,28 @@ import Chip from '@material-ui/core/Chip';
 import MenuItem from '@material-ui/core/MenuItem';
 import CancelIcon from '@material-ui/icons/Cancel';
 import { emphasize } from '@material-ui/core/styles/colorManipulator';
+import { connect } from 'react-redux';
+import bouquet from './bouquet.jpg';
+import gerbe from './gerbe.jpg';
+import couronne from './couronne.jpg';
+
+const mapStateToProps = state => ({
+	ceremonie: state.ceremonieReducer,
+	fleurs: state.fleursReducer,
+	urne: state.urneReducer
+});
+
+const mapDispatchToProps = dispatch => ({
+	onCeremonieY: () => dispatch({ type: "CEREMONIEY" }),
+	onCeremonieN: () => dispatch({ type: "CEREMONIEN" }),
+	onCeremonieIDK: () => dispatch({ type: "CEREMONIEIDK" }),
+	onUrneY: () => dispatch({ type: "URNEY" }),
+	onUrneN: () => dispatch({ type: "URNEN" }),
+	onUrneIDK: () => dispatch({ type: "URNEIDK" }),
+	sobre: (payload) => dispatch({ type: "SOBRE", payload: payload }),
+	standard: (payload) => dispatch({ type: "STANDARD", payload: payload }),
+	luxe: (payload) => dispatch({ type: "LUXE", payload: payload })
+});
 
 const suggestions = [
   { label: '1' },
@@ -191,17 +213,85 @@ class ChoiceOptions extends React.Component {
       luxe: null,
       ceremonieOui: false,
       ceremonieNon: false,
-      ceremonieJeNeSaisPas: false,
+      ceremonieJeNeSaisPas: true,
       urneOui: false,
       urneNon: false,
-      urneJeNeSaisPas: false,
+      urneJeNeSaisPas: true,
     };
+		this.handleCeremonieY = this.handleCeremonieY.bind(this);
+		this.handleCeremonieN = this.handleCeremonieN.bind(this);
+		this.handleCeremonieIDK = this.handleCeremonieIDK.bind(this);
+		this.handleUrneY = this.handleUrneY.bind(this);
+		this.handleUrneN = this.handleUrneN.bind(this);
+		this.handleUrneIDK = this.handleUrneIDK.bind(this);
   }
 
+  componentDidMount(){
+    window.scrollTo(0, 0);
+  }
+
+	handleCeremonieY() {
+		const { ceremonieOui } = this.state;
+		const { ceremonieNon } = this.state;
+		const { ceremonieJeNeSaisPas } = this.state;
+		this.setState({ ceremonieOui: !ceremonieOui, ceremonieNon: false, ceremonieJeNeSaisPas: false });
+		this.props.onCeremonieY();
+	}
+
+	handleCeremonieN() {
+		const { ceremonieOui } = this.state;
+		const { ceremonieNon } = this.state;
+		const { ceremonieJeNeSaisPas } = this.state;
+		this.setState({ ceremonieNon: !ceremonieNon, ceremonieOui: false, ceremonieJeNeSaisPas: false });
+		this.props.onCeremonieN();
+	}
+
+	handleCeremonieIDK() {
+		const { ceremonieOui } = this.state;
+		const { ceremonieNon } = this.state;
+		const { ceremonieJeNeSaisPas } = this.state;
+		this.setState({ ceremonieJeNeSaisPas: !ceremonieJeNeSaisPas, ceremonieNon: false, ceremonieOui: false });
+		this.props.onCeremonieIDK();
+	}
+
+	handleUrneY() {
+		const { urneOui } = this.state;
+		const { urneNon } = this.state;
+		const { urneJeNeSaisPas } = this.state;
+		this.setState({ urneOui: !urneOui, urneNon: false, urneJeNeSaisPas: false });
+		this.props.onUrneY();
+	}
+
+	handleUrneN() {
+		const { urneOui } = this.state;
+		const { urneNon } = this.state;
+		const { urneJeNeSaisPas } = this.state;
+		this.setState({ urneNon: !urneNon, urneOui: false, urneJeNeSaisPas: false });
+		this.props.onUrneN();
+	}
+
+	handleUrneIDK() {
+		const { urneOui } = this.state;
+		const { urneNon } = this.state;
+		const { urneJeNeSaisPas } = this.state;
+		this.setState({ urneJeNeSaisPas: !urneJeNeSaisPas, urneNon: false, urneOui: false });
+		this.props.onUrneIDK();
+	}
+
   handleChange = name => value => {
+		console.log("name", name);
+		console.log("value", value);
+		console.log("sobre");
     this.setState({
       [name]: value,
     });
+		if (name === "sobre") {
+			this.props.sobre(value.value);
+		} else if (name === "luxe") {
+			this.props.luxe(value.value);
+		} else {	
+			this.props.standard(value.value);
+		}
   };
 
   render() {
@@ -229,16 +319,16 @@ class ChoiceOptions extends React.Component {
             <div className="div-btn__options__section">
               <div className="div-btn__options__section__description">
                 <div className="div-btn__options__section__header"> Cérémonie </div>
-                <div className={ceremonieOui ? 'div-btn__options__section__description__item--change  height__change' : 'div-btn__options__section__description__item  height__change'} onClick={() => this.setState({ ceremonieOui: !ceremonieOui, ceremonieNon: false, ceremonieJeNeSaisPas: false })} onKeyDown={this.handleKeyDown} role="button" tabIndex={0}>Oui</div>
-                <div className={ceremonieNon ? 'div-btn__options__section__description__item--change  height__change' : 'div-btn__options__section__description__item  height__change'} onClick={() => this.setState({ ceremonieNon: !ceremonieNon, ceremonieOui: false, ceremonieJeNeSaisPas: false })} onKeyDown={this.handleKeyDown} role="button" tabIndex={0}>Non</div>
-                <div className={ceremonieJeNeSaisPas ? 'div-btn__options__section__description__item--change  height__change' : 'div-btn__options__section__description__item  height__change'} onClick={() => this.setState({ ceremonieJeNeSaisPas: !ceremonieJeNeSaisPas, ceremonieNon: false, ceremonieOui: false })} onKeyDown={this.handleKeyDown} role="button" tabIndex={0}>Je ne sais pas</div>
+                <div className={ceremonieOui ? 'div-btn__options__section__description__item--change  height__change' : 'div-btn__options__section__description__item  height__change'} onClick={this.handleCeremonieY} onKeyDown={this.handleKeyDown} role="button" tabIndex={0}>Oui</div>
+                <div className={ceremonieNon ? 'div-btn__options__section__description__item--change  height__change' : 'div-btn__options__section__description__item  height__change'} onClick={this.handleCeremonieN} onKeyDown={this.handleKeyDown} role="button" tabIndex={0}>Non</div>
+                <div className={ceremonieJeNeSaisPas ? 'div-btn__options__section__description__item--change  height__change' : 'div-btn__options__section__description__item  height__change'} onClick={this.handleCeremonieIDK} onKeyDown={this.handleKeyDown} role="button" tabIndex={0}>Je ne sais pas</div>
               </div>
             </div>
             <div className="div-btn__options__section">
               <div className="div-btn__options__section__description">
                 <div className="div-btn__options__section__header"> Fleurs </div>
                 <div className="div-btn__options__section__description__item">
-                  <img className="div-btn__options__section__description__item__photo" src="https://via.placeholder.com/150x120" alt="pic" />
+                  <img className="div-btn__options__section__description__item__photo" src={bouquet} alt="pic" />
                   <div className="div-btn__options__section__description__item__selection">
                     <p className="div-btn__options__section__description__item__text">Sobre</p>
                     <div className={classes.root}>
@@ -258,7 +348,7 @@ class ChoiceOptions extends React.Component {
                   </div>
                 </div>
                 <div className="div-btn__options__section__description__item">
-                  <img className="div-btn__options__section__description__item__photo" src="https://via.placeholder.com/150x120" alt="pic" />
+                  <img className="div-btn__options__section__description__item__photo" src={gerbe} alt="pic" />
                   <div className="div-btn__options__section__description__item__selection">
                     <p className="div-btn__options__section__description__item__text">Standard</p>
                     <div className={classes.root}>
@@ -279,7 +369,7 @@ class ChoiceOptions extends React.Component {
                   </div>
                 </div>
                 <div className="div-btn__options__section__description__item">
-                  <img className="div-btn__options__section__description__item__photo" src="https://via.placeholder.com/150x120" alt="pic" />
+                  <img className="div-btn__options__section__description__item__photo" src={couronne} alt="pic" />
                   <div className="div-btn__options__section__description__item__selection">
                     <p className="div-btn__options__section__description__item__text">Luxe</p>
                     <div className={classes.root}>
@@ -303,9 +393,9 @@ class ChoiceOptions extends React.Component {
             <div className="div-btn__options__section">
               <div className="div-btn__options__section__description">
                 <div className=" div-btn__options__section__header"> Urne </div>
-                <div className={urneOui ? 'div-btn__options__section__description__item--change  height__change' : 'div-btn__options__section__description__item  height__change'} onClick={() => this.setState({ urneOui: !urneOui, urneNon: false, urneJeNeSaisPas: false })} onKeyDown={this.handleKeyDown} role="button" tabIndex={0}>Oui</div>
-                <div className={urneNon ? 'div-btn__options__section__description__item--change  height__change' : 'div-btn__options__section__description__item  height__change'} onClick={() => this.setState({ urneNon: !urneNon, urneOui: false, urneJeNeSaisPas: false })} onKeyDown={this.handleKeyDown} role="button" tabIndex={0}>Non</div>
-                <div className={urneJeNeSaisPas ? 'div-btn__options__section__description__item--change  height__change' : 'div-btn__options__section__description__item  height__change'} onClick={() => this.setState({ urneJeNeSaisPas: !urneJeNeSaisPas, urneNon: false, urneOui: false })} onKeyDown={this.handleKeyDown} role="button" tabIndex={0}>Je ne sais pas</div>
+                <div className={urneOui ? 'div-btn__options__section__description__item--change  height__change' : 'div-btn__options__section__description__item  height__change'} onClick={this.handleUrneY} onKeyDown={this.handleKeyDown} role="button" tabIndex={0}>Oui</div>
+                <div className={urneNon ? 'div-btn__options__section__description__item--change  height__change' : 'div-btn__options__section__description__item  height__change'} onClick={this.handleUrneN} onKeyDown={this.handleKeyDown} role="button" tabIndex={0}>Non</div>
+                <div className={urneJeNeSaisPas ? 'div-btn__options__section__description__item--change  height__change' : 'div-btn__options__section__description__item  height__change'} onClick={this.handleUrneIDK} onKeyDown={this.handleKeyDown} role="button" tabIndex={0}>Je ne sais pas</div>
               </div>
             </div>
           </div>
@@ -324,4 +414,9 @@ ChoiceOptions.propTypes = {
   theme: PropTypes.object.isRequired,
 };
 
-export default  withStyles(styles, { withTheme: true })(ChoiceOptions);
+const styleComponent = withStyles(styles, { withTheme: true})(ChoiceOptions);
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(styleComponent);

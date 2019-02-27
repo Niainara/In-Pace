@@ -8,9 +8,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onSobre: () => dispatch({ type: 'SOBRE' }),
-  onStandard: () => dispatch({ type: 'STANDARD' }),
-  onLuxe: () => dispatch({ type: 'LUXE' }),
+  onSobre: () => dispatch({ type: 'CERCUEILSOBRE' }),
+  onStandard: () => dispatch({ type: 'CERCUEILSTANDARD' }),
+  onLuxe: () => dispatch({ type: 'CERCUEILLUXE' }),
 });
 
 class ChoiceCercueil extends React.Component {
@@ -24,6 +24,10 @@ class ChoiceCercueil extends React.Component {
     this.handleSobre = this.handleSobre.bind(this);
     this.handleStandard = this.handleStandard.bind(this);
     this.handleLuxe = this.handleLuxe.bind(this);
+  }
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
   }
 
   handleSobre() {
