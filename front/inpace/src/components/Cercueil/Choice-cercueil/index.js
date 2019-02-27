@@ -2,14 +2,6 @@ import React from 'react';
 import './index.css';
 import { NavLink } from 'react-router-dom';
 
-const mapStateToProps = state => ({
-	cercueil: state.cercueilReducer
-});
-
-const mapDispatchToProps = dispatch =>> ({
-
-});
-
 class ChoiceCercueil extends React.Component {
   constructor(props) {
     super(props);
