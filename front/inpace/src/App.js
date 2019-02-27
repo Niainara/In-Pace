@@ -9,7 +9,7 @@ import Annexe from './components/infos/index';
 import Confident from './components/confident/index';
 import Utile from './components/utile/index';
 import Conta from './components/conta/index';
-import Results from './components/results/index';
+
 
 const App = () => (
   <div>
@@ -23,7 +23,6 @@ const App = () => (
       <Route path="/utilisation" component={Utile} />
       <Route path="/contact" component={Conta} />
     </Switch>
-    <Results />
   </div>
 
 );
