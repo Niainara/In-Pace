@@ -1,6 +1,16 @@
 import React from 'react';
 import './index.css';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+const mapStateToProps = state => ({
+	obseques: state.obsequesReducer
+});
+
+const mapDispatchToProps = dispatch => ({
+	onCremation: () => dispatch({ type: "CREMATION" }),
+	onInhumation: () => dispatch({ type: "INHUMATION" })
+});
 
 class ChoiceObs extends React.Component {
   constructor(props) {
@@ -9,17 +19,33 @@ class ChoiceObs extends React.Component {
       showingCremation: false,
       showingInhumation: false,
     };
-  }
+		this.handleCremation = this.handleCremation.bind(this);
+		this.handleInhumation = this.handleInhumation.bind(this);
+	}
+	
+	handleCremation() {
+		const { showingCremation } = this.state;
+		const { showingInhumation } = this.state;
+		this.setState({ showingCremation: !showingCremation, showingInhumation: false });
+		this.props.onCremation();
+	}
 
-  render() {
+	handleInhumation() {
+		const { showingCremation } = this.state;
+		const { showingInhumation } = this.state;
+		this.setState({ showingInhumation: !showingInhumation, showingCremation: false });
+		this.props.onInhumation();
+	}
+
+		render() {
     const { showingCremation } = this.state;
     const { showingInhumation } = this.state;
     return (
       <React.Fragment>
         <div className="container__obs">
           <div className="div-btn__obs">
-            <button className={showingCremation ? 'container__btn__obs active' : 'container__btn__obs'} type="button" onClick={() => this.setState({ showingCremation: !showingCremation, showingInhumation: false })}> Cremation </button>
-            <button className={showingInhumation ? 'container__btn__obs active' : 'container__btn__obs'} type="button" onClick={() => this.setState({ showingInhumation: !showingInhumation, showingCremation: false })}> Inhumation </button>
+            <button className={showingCremation ? 'container__btn__obs active' : 'container__btn__obs'} type="button" onClick={this.handleCremation}> Cremation </button>
+            <button className={showingInhumation ? 'container__btn__obs active' : 'container__btn__obs'} type="button" onClick={this.handleInhumation}> Inhumation </button>
           </div>
           {showingCremation ? (
             <p className="container__text__obs container__text__description__obs">
@@ -75,4 +101,7 @@ class ChoiceObs extends React.Component {
   }
 }
 
-export default ChoiceObs;
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(ChoiceObs);
