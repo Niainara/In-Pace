@@ -33,6 +33,7 @@
     "lint-all": "eslint src",
     "precommit": "npm run lint-all"
   },
+	"proxy": "http://localhost:4000",
   "eslintConfig": {
     "extends": "airbnb",
     "parser": "babel-eslint",

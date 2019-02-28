@@ -43,10 +43,10 @@ class Accueil extends Component {
             <MyForm2 />
           </div>
           <div className="nextpage__footer">
-            <NavLink to="/utilisation">CONDITIONS D&apos;UTILISATION</NavLink>
-            <NavLink to="/confidentialité">POLITIQUES DE CONFIDENTIALITE</NavLink>
-            <NavLink to="/cookies">POLITIQUE D&apos;UTILISATION DES COOKIES</NavLink>
-            <NavLink to="/contact">CONTACT</NavLink>
+            <NavLink to="/utilisation" className="nextpage__footer__link">CONDITIONS D&apos;UTILISATION</NavLink>
+            <NavLink to="/confidentialité" className="nextpage__footer__link">POLITIQUES DE CONFIDENTIALITE</NavLink>
+            <NavLink to="/cookies" className="nextpage__footer__link">POLITIQUE D&apos;UTILISATION DES COOKIES</NavLink>
+            <NavLink to="/contact" className="nextpage__footer__link">CONTACT</NavLink>
           </div>
         </div>
       </div>

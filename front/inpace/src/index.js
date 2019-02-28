@@ -17,6 +17,7 @@ import urneReducer from './reducers/urneReducer';
 import sobreReducer from './reducers/sobreReducer';
 import standardReducer from './reducers/standardReducer';
 import luxeReducer from './reducers/luxeReducer';
+import storeSqlReducer from './reducers/storeSqlReducer';
 
 //On combine les reducers pour les passer en une fois au store
 const rootReducer = combineReducers({
@@ -28,6 +29,7 @@ const rootReducer = combineReducers({
 	sobreReducer,
 	standardReducer,
 	luxeReducer,
+	storeSqlReducer,
 })
 
 //création du store auquel on passe nos reducers ainsi qu'une fonction permettant d'utiliser l'utilitaire redux sur navigateur

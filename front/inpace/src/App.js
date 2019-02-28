@@ -14,7 +14,6 @@ import Conta from './components/conta/index';
 import Detail from './components/Detail/index';
 import Results from './components/results/index';
 
-
 const App = () => (
   <div>
     <BrowserRouter>
@@ -31,7 +30,7 @@ const App = () => (
         <Route path="/utilisation" component={Utile} />
         <Route path="/contact" component={Conta} />
         <Route path="/resultats" component={Results} />
-        <Route path="/detail" component={Detail} />
+        <Route path="/detail/:id" component={Detail} />
       </Switch>
     </BrowserRouter>
   </div>
