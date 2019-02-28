@@ -20,4 +20,16 @@ router.get('/api/pompes', function(req, res, next) {
 	});
 });
 
+router.get('/api/detail/:id', (req, res) => {
+	const idDetail = req.params.id;
+	connection.query('SELECT * FROM Prestataire WHERE id_p = ?', [idDetail], function (error, results) {
+		if (error) {
+			console.log(error);
+			res.status(500).send("Erreur lors de la récupération de la pompe funèbre");
+		} else {
+			console.log(results);
+			res.json(results);
+		}
+	});	
+});
 module.exports = router;

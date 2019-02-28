@@ -4,6 +4,15 @@ import { NavLink } from 'react-router-dom';
 import IconAvatar from './flower.jpg';
 import SimpleMap from '../map/index';
 import Toolbar from '../Toolbar/toolbar';
+import { connect } from 'react-redux';
+
+const mapDispatchToProps = dispatch => ({
+	storeSql: (payload) => dispatch({ type: "SQL", payload: payload })
+});
+
+const mapStateToProps = state => ({
+	storeSql: state.storeSqlReducer
+});
 
 const array = [{ key: 1, nom: 'Association pour l`Inhumation et la Crémation' }, { key: 2, nom: 'Association pour l`Inhumation et la Crémation' }, { key: 3, nom: 'Association pour l`Inhumation et la Crémation' }, { key: 4, nom: 'Association pour l`Inhumation et la Crémation' }];
 
@@ -11,20 +20,28 @@ class Results extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+			data: [],
     };
   }
 
+	componentDidMount() {
+		fetch('/api/pompes')
+			.then(response => response.json())
+			.then(data => {this.setState({ data }); this.props.storeSql(data)});
+	}
+
   render() {
-    const listResults = array.map(elem => (
-      <li key={elem.key} className="container__results__box">
+
+		console.log("data", this.state.data);
+    const listResults = this.state.data.map(elem => (
+      <li key={elem.id_p} className="container__results__box">
         <div className="container__results__avatar">
-          <img src={IconAvatar} alt="ici" width="200" heigth="180" />
+          <img src={elem.photo_p} alt="ici" width="200" height="180" />
         </div>
         <div className="container__results__aka">
           <div className="container__results__name">
-            <p className="container__results__nom">{elem.nom}</p>
-            <span className="container__results__adresse"> Rue Van Artevelde 140, 1000 Bruxelles</span>
+            <p className="container__results__nom">{elem.pompe_p}</p>
+            <span className="container__results__adresse">{elem.adresse_p}</span>
             <div className="container__results__stars">
               <span className="fa fa-circle checked" />
               <span className="fa fa-circle checked" />
@@ -35,7 +52,7 @@ class Results extends Component {
           </div>
           <div className="container__results__price">
             <p className="container__results__prix">1200€</p>
-            <NavLink to="/detail" className="container__bouton__results">
+            <NavLink to={`/detail/${elem.id_p}`} className="container__bouton__results">
               <span>DETAILS</span>
             </NavLink>
           </div>
@@ -69,4 +86,7 @@ class Results extends Component {
   }
 }
 
-export default Results;
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(Results);

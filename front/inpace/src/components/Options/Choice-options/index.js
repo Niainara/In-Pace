@@ -279,9 +279,6 @@ class ChoiceOptions extends React.Component {
 	}
 
   handleChange = name => value => {
-		console.log("name", name);
-		console.log("value", value);
-		console.log("sobre");
     this.setState({
       [name]: value,
     });
