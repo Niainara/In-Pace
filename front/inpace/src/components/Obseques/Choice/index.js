@@ -16,8 +16,8 @@ class ChoiceObs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showingCremation: true,
-      showingInhumation: false,
+      showingCremation: false,
+      showingInhumation: true,
     };
     this.handleCremation = this.handleCremation.bind(this);
     this.handleInhumation = this.handleInhumation.bind(this);

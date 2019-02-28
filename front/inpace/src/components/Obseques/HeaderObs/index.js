@@ -19,7 +19,7 @@ class HeaderObs extends React.Component {
           <li className="header__obs__progress__item header__obs__progress__item__inactive" />
           <li className="header__obs__progress__item header__obs__progress__item__inactive" />
         </ul>
-        <h1 className="header__title__obs">Les Services de Base</h1>
+        <h1 className="header__title__obs">Choix du Type de Funérailles</h1>
         <p className="header__description__obs">En Belgique, l’organisation de funérailles implique nécessairement un choix à effectuer entre la crémation ou l’inhumation du défunt. Des explications plus détaillées concernant la crémation et l’inhumation peuvent être consultées en cliquant sur le champ correspondant.</p>
       </div>
     );
